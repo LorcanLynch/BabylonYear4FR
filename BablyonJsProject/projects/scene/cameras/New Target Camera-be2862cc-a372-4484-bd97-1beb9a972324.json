@@ -1,0 +1,42 @@
+{
+	"tags": null,
+	"rotation": [
+		0.2372319069514804,
+		1.5810702032579738,
+		0.004103586226421152
+	],
+	"speed": 2,
+	"position": [
+		-2.9001643657684326,
+		1.391116738319397,
+		-0.02096455730497837
+	],
+	"upVector": [
+		0.23504073917865753,
+		0.9719840288162231,
+		0.001688926829956472
+	],
+	"fov": 0.8,
+	"projectionPlaneTilt": 0,
+	"minZ": 1,
+	"maxZ": 10000,
+	"inertia": 0.9,
+	"mode": 0,
+	"layerMask": 268435455,
+	"fovMode": 0,
+	"cameraRigMode": 0,
+	"name": "New Target Camera",
+	"id": "be2862cc-a372-4484-bd97-1beb9a972324",
+	"state": "",
+	"metadata": {
+		"script": {
+			"name": "None"
+		}
+	},
+	"uniqueId": 417,
+	"type": "TargetCamera",
+	"parentId": "e22f3d3a-65b2-4993-8c52-cb05d2af8278",
+	"animations": [],
+	"ranges": [],
+	"isEnabled": true
+}
