@@ -3,6 +3,7 @@ import { ScriptMap } from "./tools";
  * Defines the interface that exposes all exported scripts in this project.
  */
 export interface ISceneScriptMap {
+    "src/scenes/Hazard.ts": ScriptMap;
     "src/scenes/PlayerMove.ts": ScriptMap;
 }
 /**

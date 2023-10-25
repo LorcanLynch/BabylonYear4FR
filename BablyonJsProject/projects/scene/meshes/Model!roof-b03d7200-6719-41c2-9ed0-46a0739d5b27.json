@@ -1,0 +1,149 @@
+{
+	"materials": [],
+	"meshes": [
+		{
+			"name": "Model::roof",
+			"id": "b03d7200-6719-41c2-9ed0-46a0739d5b27",
+			"uniqueId": 3732,
+			"type": "Mesh",
+			"position": [
+				-4.485722541809082,
+				72.28578186035156,
+				156.0138397216797
+			],
+			"rotationQuaternion": [
+				-5.338507924852916e-8,
+				-0.7071067811865455,
+				-0.7071067811865456,
+				5.338507924852917e-8
+			],
+			"scaling": [
+				2.9446749687194824,
+				2.9446749687194824,
+				2.9446749687194824
+			],
+			"localMatrix": {
+				"0": 1,
+				"1": 0,
+				"2": 0,
+				"3": 0,
+				"4": 0,
+				"5": 1,
+				"6": 0,
+				"7": 0,
+				"8": 0,
+				"9": 0,
+				"10": 1,
+				"11": 0,
+				"12": 0,
+				"13": 0,
+				"14": 0,
+				"15": 1
+			},
+			"isEnabled": true,
+			"isVisible": true,
+			"infiniteDistance": false,
+			"pickable": true,
+			"receiveShadows": false,
+			"billboardMode": 0,
+			"visibility": 1,
+			"checkCollisions": false,
+			"isBlocker": false,
+			"overrideMaterialSideOrientation": null,
+			"parentId": "2f5c556d-f19b-4a5e-9f2d-f9a7f071caaf",
+			"isUnIndexed": false,
+			"geometryId": "82ba6e79-e545-45cd-92f9-e37c8a1e5543",
+			"subMeshes": null,
+			"materialId": "4e60aaf5-d55b-45eb-bd0d-c6f6a53666a2",
+			"metadata": {
+				"basePoseMatrix": {
+					"0": 1,
+					"1": 0,
+					"2": 0,
+					"3": 0,
+					"4": 0,
+					"5": 1,
+					"6": 0,
+					"7": 0,
+					"8": 0,
+					"9": 0,
+					"10": 1,
+					"11": 0,
+					"12": 0,
+					"13": 0,
+					"14": 0,
+					"15": 1
+				},
+				"originalSourceFile": {
+					"id": "Model::roof",
+					"name": "Model::roof",
+					"sceneFileName": "Cybercity/FBX/2story_long.FBX"
+				},
+				"isPickable": false
+			},
+			"instances": [],
+			"animations": [],
+			"ranges": [],
+			"layerMask": 268435455,
+			"alphaIndex": 1.7976931348623157e+308,
+			"hasVertexAlpha": false,
+			"overlayAlpha": 0.3,
+			"overlayColor": [
+				1,
+				0,
+				0
+			],
+			"applyFog": true,
+			"delayLoadingFile": "geometries/82ba6e79-e545-45cd-92f9-e37c8a1e5543.babylonbinarymeshdata",
+			"boundingBoxMaximum": [
+				25.038942337036133,
+				25.192272186279297,
+				25.1131591796875
+			],
+			"boundingBoxMinimum": [
+				-24.961055755615234,
+				-74.80755615234375,
+				25.1131591796875
+			],
+			"_binaryInfo": {
+				"positionsAttrDesc": {
+					"count": 90,
+					"stride": 3,
+					"offset": 0,
+					"dataType": 1
+				},
+				"normalsAttrDesc": {
+					"count": 90,
+					"stride": 3,
+					"offset": 360,
+					"dataType": 1
+				},
+				"uvsAttrDesc": {
+					"count": 60,
+					"stride": 2,
+					"offset": 720,
+					"dataType": 1
+				},
+				"indicesAttrDesc": {
+					"count": 30,
+					"stride": 1,
+					"offset": 960,
+					"dataType": 0
+				},
+				"subMeshesAttrDesc": {
+					"count": 1,
+					"stride": 5,
+					"offset": 1080,
+					"dataType": 0
+				}
+			},
+			"positions": null,
+			"normals": null,
+			"uvs": null,
+			"hasUVs": true,
+			"indices": null
+		}
+	],
+	"multiMaterials": [],
+	"lods": []
+}

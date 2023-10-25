@@ -1,0 +1,188 @@
+{
+	"materials": [],
+	"meshes": [
+		{
+			"name": "Model::2story_long",
+			"id": "d61e71cc-3960-450c-b1ff-f52ffa3d028e",
+			"uniqueId": 3731,
+			"type": "Mesh",
+			"position": [
+				263.01611328125,
+				16.17433738708496,
+				-554.8333129882812
+			],
+			"rotationQuaternion": [
+				3.0908619072630584e-8,
+				0.7071067811865468,
+				0.7071067811865469,
+				-3.0908619072630584e-8
+			],
+			"scaling": [
+				0.6999999880790737,
+				0.6999999880790737,
+				0.699999988079071
+			],
+			"localMatrix": {
+				"0": 1,
+				"1": 0,
+				"2": 0,
+				"3": 0,
+				"4": 0,
+				"5": 1,
+				"6": 0,
+				"7": 0,
+				"8": 0,
+				"9": 0,
+				"10": 1,
+				"11": 0,
+				"12": 0,
+				"13": 0,
+				"14": 0,
+				"15": 1
+			},
+			"isEnabled": true,
+			"isVisible": true,
+			"infiniteDistance": false,
+			"pickable": true,
+			"receiveShadows": false,
+			"billboardMode": 0,
+			"visibility": 1,
+			"checkCollisions": false,
+			"isBlocker": false,
+			"overrideMaterialSideOrientation": null,
+			"parentId": "2f5c556d-f19b-4a5e-9f2d-f9a7f071caaf",
+			"isUnIndexed": false,
+			"geometryId": "ddf7fe68-c439-4246-aa5b-038b53dcb36a",
+			"subMeshes": null,
+			"materialId": "36004068-5b64-4950-bc70-5324e6d8d0b7",
+			"metadata": {
+				"basePoseMatrix": {
+					"0": 1,
+					"1": 0,
+					"2": 0,
+					"3": 0,
+					"4": 0,
+					"5": 1,
+					"6": 0,
+					"7": 0,
+					"8": 0,
+					"9": 0,
+					"10": 1,
+					"11": 0,
+					"12": 0,
+					"13": 0,
+					"14": 0,
+					"15": 1
+				},
+				"originalSourceFile": {
+					"id": "Model::2story_long",
+					"name": "Model::2story_long",
+					"sceneFileName": "Cybercity/FBX/2story_long.FBX"
+				},
+				"isPickable": false,
+				"script": {
+					"name": "None"
+				},
+				"renderingGroupId": 0
+			},
+			"instances": [
+				{
+					"name": "Model::2story_long (Mesh Instance)",
+					"id": "4558ea68-33a6-495f-923f-4434f10c0025",
+					"isEnabled": true,
+					"isVisible": true,
+					"isPickable": true,
+					"checkCollisions": false,
+					"position": [
+						344.97857666015625,
+						16.17433738708496,
+						-554.8333129882812
+					],
+					"scaling": [
+						0.6999999880790737,
+						0.6999999880790737,
+						0.699999988079071
+					],
+					"parentId": "2f5c556d-f19b-4a5e-9f2d-f9a7f071caaf",
+					"rotationQuaternion": [
+						3.0908619072630584e-8,
+						0.7071067811865468,
+						0.7071067811865469,
+						-3.0908619072630584e-8
+					],
+					"metadata": {
+						"isPickable": false,
+						"script": {
+							"name": "None"
+						},
+						"renderingGroupId": 0
+					},
+					"animations": [],
+					"ranges": []
+				}
+			],
+			"animations": [],
+			"ranges": [],
+			"layerMask": 268435455,
+			"alphaIndex": 1.7976931348623157e+308,
+			"hasVertexAlpha": false,
+			"overlayAlpha": 0.3,
+			"overlayColor": [
+				1,
+				0,
+				0
+			],
+			"applyFog": true,
+			"delayLoadingFile": "geometries/ddf7fe68-c439-4246-aa5b-038b53dcb36a.babylonbinarymeshdata",
+			"boundingBoxMaximum": [
+				25,
+				25,
+				25
+			],
+			"boundingBoxMinimum": [
+				-25,
+				-75.0160903930664,
+				-25
+			],
+			"_binaryInfo": {
+				"positionsAttrDesc": {
+					"count": 1296,
+					"stride": 3,
+					"offset": 0,
+					"dataType": 1
+				},
+				"normalsAttrDesc": {
+					"count": 1296,
+					"stride": 3,
+					"offset": 5184,
+					"dataType": 1
+				},
+				"uvsAttrDesc": {
+					"count": 864,
+					"stride": 2,
+					"offset": 10368,
+					"dataType": 1
+				},
+				"indicesAttrDesc": {
+					"count": 432,
+					"stride": 1,
+					"offset": 13824,
+					"dataType": 0
+				},
+				"subMeshesAttrDesc": {
+					"count": 1,
+					"stride": 5,
+					"offset": 15552,
+					"dataType": 0
+				}
+			},
+			"positions": null,
+			"normals": null,
+			"uvs": null,
+			"hasUVs": true,
+			"indices": null
+		}
+	],
+	"multiMaterials": [],
+	"lods": []
+}

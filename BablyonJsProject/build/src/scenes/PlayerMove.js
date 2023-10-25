@@ -74,8 +74,9 @@ var MyScript = /** @class */ (function (_super) {
     MyScript.prototype._spacekeydown = function (info) {
         if (this.canJump) {
             this.time = new Date().getTime();
-            this.gravitys = 1;
+            this.gravitys = 3;
             this.canJump = false;
+            this.skeleton.beginAnimation("jump", false, 3, this.anim);
         }
     };
     ;
@@ -101,6 +102,7 @@ var MyScript = /** @class */ (function (_super) {
     };
     MyScript.prototype.anim = function () {
         // ...
+        this.skeleton.beginAnimation("Walk");
     };
     /**
      * Called each frame.
@@ -110,11 +112,17 @@ var MyScript = /** @class */ (function (_super) {
         if (this.times - this.time > 200) {
             this.gravitys = 0;
         }
-        if (this.times - this.time > 600) {
+        if (this.times - this.time > 800) {
             this.canJump = true;
         }
         this.rotationQuaternion = core_1.Quaternion.Identity();
         this.times = new Date().getTime();
+        if (this.position.x > 23) {
+            this.position.x = 23;
+        }
+        if (this.position.x < -13) {
+            this.position.x = -13;
+        }
     };
     /**
      * Called on the object has been disposed.

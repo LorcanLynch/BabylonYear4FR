@@ -60,8 +60,9 @@ export default class MyScript extends Mesh {
         if(this.canJump)
         {
         this.time = new Date().getTime();
-        this.gravitys = 1
+        this.gravitys = 3
         this.canJump = false;
+        this.skeleton.beginAnimation("jump",false,3,this.anim)
         }
     };
 
@@ -93,7 +94,7 @@ export default class MyScript extends Mesh {
     }
     public anim(): void {
         // ...
-        
+        this.skeleton.beginAnimation("Walk")
       
     }
     /**
@@ -110,12 +111,20 @@ export default class MyScript extends Mesh {
             this.gravitys = 0;
             
             }
-            if(this.times - this.time > 600)
+            if(this.times - this.time > 800)
             {
                 this.canJump = true;
             }
             this.rotationQuaternion = Quaternion.Identity();
            this.times = new Date().getTime();
+           if(this.position.x >23)
+           {
+            this.position.x = 23;
+           }
+           if(this.position.x <-13)
+           {
+            this.position.x = -13;
+           }
           
     }
 
