@@ -1,0 +1,55 @@
+{
+	"tags": null,
+	"position": [
+		0.7154654264450073,
+		4.454397201538086,
+		-0.025020534172654152
+	],
+	"rotation": [
+		0,
+		0,
+		0
+	],
+	"rotationQuaternion": [
+		-0.0000012298617093620123,
+		5.943932279706132e-8,
+		1.019797721824034e-7,
+		1
+	],
+	"scaling": [
+		0.9999999403953552,
+		0.9999998807907104,
+		0.9999999403953552
+	],
+	"billboardMode": 0,
+	"scalingDeterminant": 1,
+	"infiniteDistance": false,
+	"ignoreNonUniformScaling": false,
+	"reIntegrateRotationIntoRotationQuaternion": false,
+	"name": "mixamorig:LeftHandRing1",
+	"id": "26c78381-f6d8-4d2f-b4ff-d129d3b8ddbd",
+	"state": "",
+	"metadata": {},
+	"type": "TransformNode",
+	"uniqueId": 16357,
+	"parentId": "8af82190-f58e-48bd-8b3e-4197037bf94d",
+	"localMatrix": {
+		"0": 1,
+		"1": 0,
+		"2": 0,
+		"3": 0,
+		"4": 0,
+		"5": 1,
+		"6": 0,
+		"7": 0,
+		"8": 0,
+		"9": 0,
+		"10": 1,
+		"11": 0,
+		"12": 0,
+		"13": 0,
+		"14": 0,
+		"15": 1
+	},
+	"isEnabled": true
+}

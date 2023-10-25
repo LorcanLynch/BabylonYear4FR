@@ -1,0 +1,55 @@
+{
+	"tags": null,
+	"position": [
+		-1.4963916328269988e-8,
+		7.492000579833984,
+		0.0000037033130411145976
+	],
+	"rotation": [
+		0,
+		0,
+		0
+	],
+	"rotationQuaternion": [
+		-0.0000010518409681026242,
+		5.02702679483491e-9,
+		0.00872620940208435,
+		0.9999619126319885
+	],
+	"scaling": [
+		1,
+		1,
+		1
+	],
+	"billboardMode": 0,
+	"scalingDeterminant": 1,
+	"infiniteDistance": false,
+	"ignoreNonUniformScaling": false,
+	"reIntegrateRotationIntoRotationQuaternion": false,
+	"name": "mixamorig:LeftForeArm",
+	"id": "67ec470f-bdd8-487c-95da-b7bf122e1e8f",
+	"state": "",
+	"metadata": {},
+	"type": "TransformNode",
+	"uniqueId": 16343,
+	"parentId": "d28ec05c-e06e-4f19-bec2-5cfdb53f3193",
+	"localMatrix": {
+		"0": 1,
+		"1": 0,
+		"2": 0,
+		"3": 0,
+		"4": 0,
+		"5": 1,
+		"6": 0,
+		"7": 0,
+		"8": 0,
+		"9": 0,
+		"10": 1,
+		"11": 0,
+		"12": 0,
+		"13": 0,
+		"14": 0,
+		"15": 1
+	},
+	"isEnabled": true
+}

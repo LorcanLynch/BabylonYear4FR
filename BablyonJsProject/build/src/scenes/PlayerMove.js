@@ -50,6 +50,9 @@ var MyScript = /** @class */ (function (_super) {
     // @ts-ignore ignoring the super call as we don't want to re-init
     function MyScript() {
         var _this = this;
+        _this.time = new Date().getTime();
+        _this.times = new Date().getTime();
+        _this.canJump = true;
         return _this;
     }
     MyScript.prototype._keyup = function (info) {
@@ -66,6 +69,14 @@ var MyScript = /** @class */ (function (_super) {
     ;
     MyScript.prototype._dkeydown = function (info) {
         this.speed = -1;
+    };
+    ;
+    MyScript.prototype._spacekeydown = function (info) {
+        if (this.canJump) {
+            this.time = new Date().getTime();
+            this.gravitys = 1;
+            this.canJump = false;
+        }
     };
     ;
     /**
@@ -86,12 +97,24 @@ var MyScript = /** @class */ (function (_super) {
      */
     MyScript.prototype.onStart = function () {
         // ...
+        this.skeleton.beginAnimation("Walk", true);
+    };
+    MyScript.prototype.anim = function () {
+        // ...
     };
     /**
      * Called each frame.
      */
     MyScript.prototype.onUpdate = function () {
-        this.moveWithCollisions(new core_1.Vector3(.01, 0, this.speed));
+        this.locallyTranslate(new core_1.Vector3(this.speed, this.gravitys, -1));
+        if (this.times - this.time > 200) {
+            this.gravitys = 0;
+        }
+        if (this.times - this.time > 600) {
+            this.canJump = true;
+        }
+        this.rotationQuaternion = core_1.Quaternion.Identity();
+        this.times = new Date().getTime();
     };
     /**
      * Called on the object has been disposed.
@@ -125,6 +148,9 @@ var MyScript = /** @class */ (function (_super) {
     __decorate([
         (0, decorators_1.onKeyboardEvent)("d", core_1.KeyboardEventTypes.KEYDOWN)
     ], MyScript.prototype, "_dkeydown", null);
+    __decorate([
+        (0, decorators_1.onKeyboardEvent)(" ", core_1.KeyboardEventTypes.KEYDOWN)
+    ], MyScript.prototype, "_spacekeydown", null);
     return MyScript;
 }(core_1.Mesh));
 exports.default = MyScript;

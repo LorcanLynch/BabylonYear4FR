@@ -24,10 +24,15 @@ export default class MyScript extends Mesh {
      */
     protected constructor();
     private speed;
+    private gravitys;
+    time: number;
+    times: number;
+    canJump: boolean;
     protected _keyup(info: KeyboardInfo): void;
     protected _keydown(info: KeyboardInfo): void;
     protected _dkeyup(info: KeyboardInfo): void;
     protected _dkeydown(info: KeyboardInfo): void;
+    protected _spacekeydown(info: KeyboardInfo): void;
     /**
      * Called on the node is being initialized.
      * This function is called immediatly after the constructor has been called.
@@ -41,6 +46,7 @@ export default class MyScript extends Mesh {
      * Called on the scene starts.
      */
     onStart(): void;
+    anim(): void;
     /**
      * Called each frame.
      */

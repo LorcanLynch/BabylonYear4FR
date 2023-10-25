@@ -1,0 +1,55 @@
+{
+	"tags": null,
+	"position": [
+		1.4901161193847656e-8,
+		1.3062784671783447,
+		0.000005152076482772827
+	],
+	"rotation": [
+		0,
+		0,
+		0
+	],
+	"rotationQuaternion": [
+		0.000012010336831735913,
+		-0.0000010831281542778015,
+		-0.00004533049650490284,
+		1
+	],
+	"scaling": [
+		1,
+		1,
+		0.9999999403953552
+	],
+	"billboardMode": 0,
+	"scalingDeterminant": 1,
+	"infiniteDistance": false,
+	"ignoreNonUniformScaling": false,
+	"reIntegrateRotationIntoRotationQuaternion": false,
+	"name": "mixamorig:RightHandThumb2",
+	"id": "d3c9e7b5-d569-4bfa-b7d5-100799945f34",
+	"state": "",
+	"metadata": {},
+	"type": "TransformNode",
+	"uniqueId": 16370,
+	"parentId": "3f0f29a4-e069-4f78-a110-484b445f4f4e",
+	"localMatrix": {
+		"0": 1,
+		"1": 0,
+		"2": 0,
+		"3": 0,
+		"4": 0,
+		"5": 1,
+		"6": 0,
+		"7": 0,
+		"8": 0,
+		"9": 0,
+		"10": 1,
+		"11": 0,
+		"12": 0,
+		"13": 0,
+		"14": 0,
+		"15": 1
+	},
+	"isEnabled": true
+}

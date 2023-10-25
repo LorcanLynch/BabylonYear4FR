@@ -1,0 +1,55 @@
+{
+	"tags": null,
+	"position": [
+		-5.238909721374512,
+		1.0192515850067139,
+		-4.706781387329102
+	],
+	"rotation": [
+		0,
+		0,
+		0
+	],
+	"rotationQuaternion": [
+		-0.9994943141937256,
+		1.0457796087437465e-11,
+		-3.287074779034782e-10,
+		0.03179876133799553
+	],
+	"scaling": [
+		1,
+		0.9999998807907104,
+		1.0000041723251343
+	],
+	"billboardMode": 0,
+	"scalingDeterminant": 1,
+	"infiniteDistance": false,
+	"ignoreNonUniformScaling": false,
+	"reIntegrateRotationIntoRotationQuaternion": false,
+	"name": "mixamorig:Cloak1",
+	"id": "964e5c07-edf1-459e-becb-5d2ba986da05",
+	"state": "",
+	"metadata": {},
+	"type": "TransformNode",
+	"uniqueId": 16555,
+	"parentId": "14426df3-8a70-4b53-9fa7-845e6f7b32ac",
+	"localMatrix": {
+		"0": 1,
+		"1": 0,
+		"2": 0,
+		"3": 0,
+		"4": 0,
+		"5": 1,
+		"6": 0,
+		"7": 0,
+		"8": 0,
+		"9": 0,
+		"10": 1,
+		"11": 0,
+		"12": 0,
+		"13": 0,
+		"14": 0,
+		"15": 1
+	},
+	"isEnabled": true
+}

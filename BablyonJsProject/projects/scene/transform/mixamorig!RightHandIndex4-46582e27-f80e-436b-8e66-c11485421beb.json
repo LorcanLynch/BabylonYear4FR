@@ -1,0 +1,55 @@
+{
+	"tags": null,
+	"position": [
+		6.085247150622308e-8,
+		0.8084671497344971,
+		0.000003851238034258131
+	],
+	"rotation": [
+		0,
+		0,
+		0
+	],
+	"rotationQuaternion": [
+		0.00000943685336096678,
+		-5.2352273627320756e-8,
+		1.5831775002084214e-8,
+		1
+	],
+	"scaling": [
+		1,
+		1,
+		1
+	],
+	"billboardMode": 0,
+	"scalingDeterminant": 1,
+	"infiniteDistance": false,
+	"ignoreNonUniformScaling": false,
+	"reIntegrateRotationIntoRotationQuaternion": false,
+	"name": "mixamorig:RightHandIndex4",
+	"id": "46582e27-f80e-436b-8e66-c11485421beb",
+	"state": "",
+	"metadata": {},
+	"type": "TransformNode",
+	"uniqueId": 16542,
+	"parentId": "2a8e2421-ca06-4231-974a-1beb487d6853",
+	"localMatrix": {
+		"0": 1,
+		"1": 0,
+		"2": 0,
+		"3": 0,
+		"4": 0,
+		"5": 1,
+		"6": 0,
+		"7": 0,
+		"8": 0,
+		"9": 0,
+		"10": 1,
+		"11": 0,
+		"12": 0,
+		"13": 0,
+		"14": 0,
+		"15": 1
+	},
+	"isEnabled": true
+}

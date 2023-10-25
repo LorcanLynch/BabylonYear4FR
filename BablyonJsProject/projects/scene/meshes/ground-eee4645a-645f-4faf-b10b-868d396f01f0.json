@@ -8,18 +8,19 @@
 			"type": "GroundMesh",
 			"position": [
 				0,
-				0,
+				-1.3476415872573853,
 				0
 			],
-			"rotation": [
+			"rotationQuaternion": [
 				0,
 				0,
-				0
+				0,
+				1
 			],
 			"scaling": [
+				19000,
 				1,
-				1,
-				1
+				1000
 			],
 			"localMatrix": {
 				"0": 1,
@@ -46,13 +47,17 @@
 			"receiveShadows": true,
 			"billboardMode": 0,
 			"visibility": 1,
-			"checkCollisions": false,
+			"checkCollisions": true,
 			"isBlocker": false,
 			"overrideMaterialSideOrientation": null,
 			"isUnIndexed": false,
 			"geometryId": "ad6b245c-2a92-47da-89e7-d0e71d6f2cc7",
 			"subMeshes": null,
 			"materialId": "44ce4d7a-5718-4025-a141-272ee6387673",
+			"physicsMass": 0,
+			"physicsFriction": 0.2,
+			"physicsRestitution": 0.2,
+			"physicsImpostor": 2,
 			"metadata": {
 				"isPickable": true,
 				"script": {

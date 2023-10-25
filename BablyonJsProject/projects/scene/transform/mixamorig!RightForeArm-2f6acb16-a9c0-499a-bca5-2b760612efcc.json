@@ -1,0 +1,55 @@
+{
+	"tags": null,
+	"position": [
+		-8.323922884301282e-8,
+		7.502601623535156,
+		0.000001224224547513586
+	],
+	"rotation": [
+		0,
+		0,
+		0
+	],
+	"rotationQuaternion": [
+		-2.2427926182899682e-8,
+		-2.261825926552774e-8,
+		-0.008726549334824085,
+		0.9999619126319885
+	],
+	"scaling": [
+		1,
+		1.0000001192092896,
+		1
+	],
+	"billboardMode": 0,
+	"scalingDeterminant": 1,
+	"infiniteDistance": false,
+	"ignoreNonUniformScaling": false,
+	"reIntegrateRotationIntoRotationQuaternion": false,
+	"name": "mixamorig:RightForeArm",
+	"id": "2f6acb16-a9c0-499a-bca5-2b760612efcc",
+	"state": "",
+	"metadata": {},
+	"type": "TransformNode",
+	"uniqueId": 16367,
+	"parentId": "489059d8-4c17-4ec1-b401-bbc90dc123e1",
+	"localMatrix": {
+		"0": 1,
+		"1": 0,
+		"2": 0,
+		"3": 0,
+		"4": 0,
+		"5": 1,
+		"6": 0,
+		"7": 0,
+		"8": 0,
+		"9": 0,
+		"10": 1,
+		"11": 0,
+		"12": 0,
+		"13": 0,
+		"14": 0,
+		"15": 1
+	},
+	"isEnabled": true
+}

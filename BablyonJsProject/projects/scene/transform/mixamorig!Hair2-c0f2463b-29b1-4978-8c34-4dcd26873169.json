@@ -1,0 +1,55 @@
+{
+	"tags": null,
+	"position": [
+		-9.5367431640625e-7,
+		3.9999990463256836,
+		-0.000005342066287994385
+	],
+	"rotation": [
+		0,
+		0,
+		0
+	],
+	"rotationQuaternion": [
+		-0.11634435504674911,
+		0.014517463743686676,
+		0.059597767889499664,
+		0.9913130402565002
+	],
+	"scaling": [
+		0.9999998211860657,
+		1,
+		0.9999998807907104
+	],
+	"billboardMode": 0,
+	"scalingDeterminant": 1,
+	"infiniteDistance": false,
+	"ignoreNonUniformScaling": false,
+	"reIntegrateRotationIntoRotationQuaternion": false,
+	"name": "mixamorig:Hair2",
+	"id": "c0f2463b-29b1-4978-8c34-4dcd26873169",
+	"state": "",
+	"metadata": {},
+	"type": "TransformNode",
+	"uniqueId": 16560,
+	"parentId": "a91750d1-385f-4cdd-87ae-84204b236451",
+	"localMatrix": {
+		"0": 1,
+		"1": 0,
+		"2": 0,
+		"3": 0,
+		"4": 0,
+		"5": 1,
+		"6": 0,
+		"7": 0,
+		"8": 0,
+		"9": 0,
+		"10": 1,
+		"11": 0,
+		"12": 0,
+		"13": 0,
+		"14": 0,
+		"15": 1
+	},
+	"isEnabled": true
+}

@@ -2,14 +2,13 @@
 	"materials": [],
 	"meshes": [
 		{
-			"name": "cube",
-			"id": "e22f3d3a-65b2-4993-8c52-cb05d2af8278",
-			"uniqueId": 16,
+			"name": "New Cube",
+			"id": "8fb48432-afda-4f81-abe9-589ab918c905",
+			"uniqueId": 13095,
 			"type": "Mesh",
-			"tags": "modified",
 			"position": [
-				0,
-				0.5194425692942746,
+				106.98381042480469,
+				39.47874069213867,
 				0
 			],
 			"rotationQuaternion": [
@@ -20,8 +19,8 @@
 			],
 			"scaling": [
 				1,
-				1,
-				1
+				69,
+				376.3756103515625
 			],
 			"localMatrix": {
 				"0": 1,
@@ -52,20 +51,23 @@
 			"isBlocker": false,
 			"overrideMaterialSideOrientation": null,
 			"isUnIndexed": false,
-			"geometryId": "0a6933b0-9cd4-4243-a7a6-fec39bd16cea",
+			"geometryId": "f11e6a37-513c-4cdc-a18f-89de685127cb",
 			"subMeshes": null,
-			"materialId": "03bdd37e-fe54-4095-a392-0de62b0de089",
+			"materialId": "default material",
 			"physicsMass": 1,
 			"physicsFriction": 0.2,
 			"physicsRestitution": 0.2,
-			"physicsImpostor": 2,
+			"physicsImpostor": 0,
 			"metadata": {
-				"isPickable": true,
-				"script": {
-					"name": "src/scenes/PlayerMove.ts"
+				"editorGeometry": {
+					"type": "Cube",
+					"size": 1
 				},
-				"renderingGroupId": 0,
-				"_waitingParentId": null
+				"isPickable": false,
+				"script": {
+					"name": "None"
+				},
+				"renderingGroupId": 0
 			},
 			"instances": [],
 			"animations": [],
@@ -81,7 +83,7 @@
 			],
 			"applyFog": true,
 			"parentId": null,
-			"delayLoadingFile": "geometries/0a6933b0-9cd4-4243-a7a6-fec39bd16cea.babylonbinarymeshdata",
+			"delayLoadingFile": "geometries/f11e6a37-513c-4cdc-a18f-89de685127cb.babylonbinarymeshdata",
 			"boundingBoxMaximum": [
 				0.5,
 				0.5,

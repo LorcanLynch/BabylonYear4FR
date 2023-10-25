@@ -1,0 +1,55 @@
+{
+	"tags": null,
+	"position": [
+		-0.00000286102294921875,
+		1.273573875427246,
+		-9.98377799987793e-7
+	],
+	"rotation": [
+		0,
+		0,
+		0
+	],
+	"rotationQuaternion": [
+		1.396984004031765e-7,
+		-3.57162207365036e-7,
+		-0.000018269754946231842,
+		1
+	],
+	"scaling": [
+		1.0000001192092896,
+		0.9999999403953552,
+		0.9999999403953552
+	],
+	"billboardMode": 0,
+	"scalingDeterminant": 1,
+	"infiniteDistance": false,
+	"ignoreNonUniformScaling": false,
+	"reIntegrateRotationIntoRotationQuaternion": false,
+	"name": "mixamorig:LeftHandThumb2",
+	"id": "c8341c7a-96a8-4559-9469-f194332e7b75",
+	"state": "",
+	"metadata": {},
+	"type": "TransformNode",
+	"uniqueId": 16512,
+	"parentId": "f6f6dcfc-f254-44d2-a524-55b3583ba3ea",
+	"localMatrix": {
+		"0": 1,
+		"1": 0,
+		"2": 0,
+		"3": 0,
+		"4": 0,
+		"5": 1,
+		"6": 0,
+		"7": 0,
+		"8": 0,
+		"9": 0,
+		"10": 1,
+		"11": 0,
+		"12": 0,
+		"13": 0,
+		"14": 0,
+		"15": 1
+	},
+	"isEnabled": true
+}

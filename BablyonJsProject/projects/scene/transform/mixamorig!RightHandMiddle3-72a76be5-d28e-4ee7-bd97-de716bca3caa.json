@@ -1,0 +1,55 @@
+{
+	"tags": null,
+	"position": [
+		-9.371342457598075e-8,
+		0.7800518274307251,
+		0.0000010590295005385997
+	],
+	"rotation": [
+		0,
+		0,
+		0
+	],
+	"rotationQuaternion": [
+		-0.000003106280473730294,
+		5.768178823473136e-8,
+		-0.0000018253924736200133,
+		1
+	],
+	"scaling": [
+		1,
+		1,
+		1
+	],
+	"billboardMode": 0,
+	"scalingDeterminant": 1,
+	"infiniteDistance": false,
+	"ignoreNonUniformScaling": false,
+	"reIntegrateRotationIntoRotationQuaternion": false,
+	"name": "mixamorig:RightHandMiddle3",
+	"id": "72a76be5-d28e-4ee7-bd97-de716bca3caa",
+	"state": "",
+	"metadata": {},
+	"type": "TransformNode",
+	"uniqueId": 16545,
+	"parentId": "445202b1-695c-454f-aa16-b0dd8cce85eb",
+	"localMatrix": {
+		"0": 1,
+		"1": 0,
+		"2": 0,
+		"3": 0,
+		"4": 0,
+		"5": 1,
+		"6": 0,
+		"7": 0,
+		"8": 0,
+		"9": 0,
+		"10": 1,
+		"11": 0,
+		"12": 0,
+		"13": 0,
+		"14": 0,
+		"15": 1
+	},
+	"isEnabled": true
+}

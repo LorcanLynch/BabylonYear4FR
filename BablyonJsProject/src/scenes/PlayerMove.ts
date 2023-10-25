@@ -1,8 +1,8 @@
-import {
-    Mesh, AnimationRange, Animatable, ArcRotateCamera, Animation, Vector3,
+import {Scene,
+    Mesh, AnimationRange, Animatable, ArcRotateCamera, Animation, Vector3,Ray,
     Space, Bone, KeyboardInfo, KeyboardEventTypes, Epsilon, Quaternion, Scalar,
 } from "@babylonjs/core";
-import { onKeyboardEvent } from "./decorators";
+import { onKeyboardEvent, visibleInInspector ,fromScene} from "./decorators";
 
 
 
@@ -32,8 +32,10 @@ export default class MyScript extends Mesh {
     // @ts-ignore ignoring the super call as we don't want to re-init
     protected constructor() { }
     private speed : number;
-    
-
+    private gravitys : number;
+    public time : number = new Date().getTime();
+    public times : number = new Date().getTime();
+    public canJump : boolean = true;
     @onKeyboardEvent("a", KeyboardEventTypes.KEYUP)
     protected _keyup(info: KeyboardInfo): void {
         this.speed = 0
@@ -50,12 +52,27 @@ export default class MyScript extends Mesh {
     protected _dkeydown(info: KeyboardInfo): void {
         this.speed = -1
     };
+    
+    
+    @onKeyboardEvent(" ", KeyboardEventTypes.KEYDOWN)
+    protected _spacekeydown(info: KeyboardInfo): void {
+        
+        if(this.canJump)
+        {
+        this.time = new Date().getTime();
+        this.gravitys = 1
+        this.canJump = false;
+        }
+    };
+
+    
     /**
      * Called on the node is being initialized.
      * This function is called immediatly after the constructor has been called.
      */
     public onInitialize(): void {
         // ...
+        
     }
 
     /**
@@ -63,6 +80,7 @@ export default class MyScript extends Mesh {
      */
     public onInitialized(): void {
         // ...
+        
     }
 
     /**
@@ -70,16 +88,35 @@ export default class MyScript extends Mesh {
      */
     public onStart(): void {
         // ...
+        
+        this.skeleton.beginAnimation("Walk",true)
     }
-
+    public anim(): void {
+        // ...
+        
+      
+    }
     /**
      * Called each frame.
      */
     public onUpdate(): void {
         
-       
-            this.moveWithCollisions(new Vector3(.01,0,this.speed));
         
+        
+        
+            this.locallyTranslate(new Vector3(this.speed,this.gravitys,-1))
+            if(this.times - this.time > 200)
+            {
+            this.gravitys = 0;
+            
+            }
+            if(this.times - this.time > 600)
+            {
+                this.canJump = true;
+            }
+            this.rotationQuaternion = Quaternion.Identity();
+           this.times = new Date().getTime();
+          
     }
 
     /**
@@ -103,4 +140,6 @@ export default class MyScript extends Mesh {
                 break;
         }
     }
+
+    
 }
