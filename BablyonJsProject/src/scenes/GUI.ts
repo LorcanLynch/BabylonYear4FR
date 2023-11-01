@@ -8,6 +8,7 @@ import { platform } from "os";
 import { sceneUboDeclaration } from "@babylonjs/core/Shaders/ShadersInclude/sceneUboDeclaration";
 import { Game } from "..";
 import { text } from "stream/consumers";
+
 /**
  * This represents a script that is attached to a node in the editor.
  * Available nodes are:
@@ -33,7 +34,6 @@ export default class MyScript extends Node {
      */
     // @ts-ignore ignoring the super call as we don't want to re-init
     protected constructor() { }
-    @fromScene("Player") public player : Mesh;
     
     
     
@@ -91,19 +91,19 @@ export default class MyScript extends Node {
     advancedTexture.addControl(button1);
                 
 
-    var buttonQuit=   Button.CreateSimpleButton("but2","Quit");
-             buttonQuit.width = .2;
-             buttonQuit.height = 0.15;
-             buttonQuit.color = "white";
-    buttonQuit.fontSize = 40;
-    buttonQuit.background = "purple";
-    buttonQuit.onPointerUpObservable.add(()=>{this.loadScene();} );
-    buttonQuit.top = "20%";
+    //var buttonQuit=   Button.CreateSimpleButton("but2","Quit");
+             //buttonQuit.width = .2;
+             //buttonQuit.height = 0.15;
+             //buttonQuit.color = "white";
+    //buttonQuit.fontSize = 40;
+    //buttonQuit.background = "purple";
+    //buttonQuit.onPointerUpObservable.add(()=>{window.close();} );
+    //buttonQuit.top = "20%";
         
     
         
     
-    advancedTexture.addControl(buttonQuit);
+    //advancedTexture.addControl(buttonQuit);
 
 
     }

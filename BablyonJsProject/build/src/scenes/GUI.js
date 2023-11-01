@@ -14,15 +14,8 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 var node_1 = require("@babylonjs/core/node");
-var decorators_1 = require("./decorators");
 var advancedDynamicTexture_1 = require("@babylonjs/gui/2D/advancedDynamicTexture");
 var gui_1 = require("@babylonjs/gui");
 /**
@@ -95,15 +88,15 @@ var MyScript = /** @class */ (function (_super) {
         button1.background = "purple";
         button1.onPointerUpObservable.add(function () { _this.loadScene(); });
         advancedTexture.addControl(button1);
-        var buttonQuit = gui_1.Button.CreateSimpleButton("but2", "Quit");
-        buttonQuit.width = .2;
-        buttonQuit.height = 0.15;
-        buttonQuit.color = "white";
-        buttonQuit.fontSize = 40;
-        buttonQuit.background = "purple";
-        buttonQuit.onPointerUpObservable.add(function () { _this.loadScene(); });
-        buttonQuit.top = "20%";
-        advancedTexture.addControl(buttonQuit);
+        //var buttonQuit=   Button.CreateSimpleButton("but2","Quit");
+        //buttonQuit.width = .2;
+        //buttonQuit.height = 0.15;
+        //buttonQuit.color = "white";
+        //buttonQuit.fontSize = 40;
+        //buttonQuit.background = "purple";
+        //buttonQuit.onPointerUpObservable.add(()=>{window.close();} );
+        //buttonQuit.top = "20%";
+        //advancedTexture.addControl(buttonQuit);
     };
     /**
      * Called each frame.
@@ -131,9 +124,6 @@ var MyScript = /** @class */ (function (_super) {
                 break;
         }
     };
-    __decorate([
-        (0, decorators_1.fromScene)("Player")
-    ], MyScript.prototype, "player", void 0);
     return MyScript;
 }(node_1.Node));
 exports.default = MyScript;

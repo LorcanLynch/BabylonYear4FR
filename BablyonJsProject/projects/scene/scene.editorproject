@@ -4,21 +4,21 @@
 		"T-Pose.json",
 		"crouched.json",
 		"jump.json",
+		"jump.json",
+		"T-Pose.json",
 		"T-Pose.json",
 		"crouched.json",
-		"T-Pose.json",
+		"crouched.json",
 		"jump.json",
 		"idle.json",
-		"crouched.json",
-		"jump.json",
 		"idle.json",
-		"Walk.json",
+		"idle.json",
+		"crouched.json",
 		"T-Pose.json",
-		"idle.json",
-		"Walk.json",
-		"crouched.json",
 		"Walk.json",
 		"idle.json",
+		"Walk.json",
+		"Walk.json",
 		"Walk.json"
 	],
 	"cameras": [
@@ -42,16 +42,6 @@
 		{
 			"isMultiMaterial": false,
 			"bindedMeshes": [],
-			"json": "materials/cube.material"
-		},
-		{
-			"isMultiMaterial": false,
-			"bindedMeshes": [],
-			"json": "Material!SpacePirate_M-78820544.material"
-		},
-		{
-			"isMultiMaterial": false,
-			"bindedMeshes": [],
 			"json": "Alpha_Surface_MAT-4bf28582-de8b-4aff-868c-331dd309281f.material"
 		},
 		{
@@ -61,8 +51,11 @@
 		},
 		{
 			"isMultiMaterial": false,
-			"bindedMeshes": [],
-			"json": "Material-Material.material"
+			"bindedMeshes": [
+				"b03d7200-6719-41c2-9ed0-46a0739d5b27",
+				"602d8ef5-79d4-4bfb-9969-0c6bad8b528a"
+			],
+			"json": "Cybercity/FBX/Material!roof_mat-905631552.material"
 		},
 		{
 			"isMultiMaterial": false,
@@ -73,42 +66,28 @@
 		},
 		{
 			"isMultiMaterial": false,
-			"bindedMeshes": [],
-			"json": "Material-Material.material"
-		},
-		{
-			"isMultiMaterial": false,
-			"bindedMeshes": [],
-			"json": "roof2_mat-roof2_mat.material"
-		},
-		{
-			"isMultiMaterial": false,
-			"bindedMeshes": [],
-			"json": "4story_mat-4story_mat.material"
-		},
-		{
-			"isMultiMaterial": false,
 			"bindedMeshes": [
-				"d61e71cc-3960-450c-b1ff-f52ffa3d028e"
+				"d61e71cc-3960-450c-b1ff-f52ffa3d028e",
+				"c5382f04-b6c0-4be7-9d4d-4888f5777e0d",
+				"0269bd0d-ff7e-423b-ba89-3c572fac1a14"
 			],
 			"json": "Cybercity/FBX/Material!2story_long_mat-905630592.material"
 		},
 		{
 			"isMultiMaterial": false,
 			"bindedMeshes": [
-				"b03d7200-6719-41c2-9ed0-46a0739d5b27"
+				"5e0a54da-628a-44bb-a503-22b763fc28f8",
+				"4695ab7b-7514-496b-8940-5f8afdacf2e5"
 			],
-			"json": "Cybercity/FBX/Material!roof_mat-905631552.material"
+			"json": "roof2_mat-roof2_mat.material"
 		},
 		{
-			"isMultiMaterial": true,
-			"bindedMeshes": [],
-			"json": "Alpha_Surface_MATAlpha_Joints_MAT-d125616c-d0ff-4296-9248-5479768f89e1.json"
-		},
-		{
-			"isMultiMaterial": true,
-			"bindedMeshes": [],
-			"json": "Alpha_Surface_MATAlpha_Joints_MAT-d125616c-d0ff-4296-9248-5479768f89e1.json"
+			"isMultiMaterial": false,
+			"bindedMeshes": [
+				"af3cfb69-a54f-4c7b-b315-5bec8c24f42a",
+				"5137d325-aa9c-4e1d-bd03-59c141bb01fb"
+			],
+			"json": "4story_mat-4story_mat.material"
 		}
 	],
 	"textures": [
@@ -130,10 +109,16 @@
 		"Hazard-cdf98bed-4364-4f1e-bde5-763d69c4015e.json",
 		"Player-12fcc2b4-297c-4ea8-959b-69b17a6633b6.json",
 		"Model!2story_long-d61e71cc-3960-450c-b1ff-f52ffa3d028e.json",
-		"Model!roof-b03d7200-6719-41c2-9ed0-46a0739d5b27.json"
+		"Hazard1-43494781-64eb-4de2-96e4-4a5240cf94ca.json",
+		"Hazard2-dc3d90d4-2763-4d78-ab88-e22f46c15fc9.json",
+		"__root__-0eb9c81d-e869-40b2-b393-113e6804bc21.json",
+		"__root__-59e8e4b4-99b8-4dc8-9ba1-d5f1958867c3.json",
+		"Model!2story_long-0269bd0d-ff7e-423b-ba89-3c572fac1a14.json"
 	],
 	"transformNodes": [
-		"2story_long.FBX-2f5c556d-f19b-4a5e-9f2d-f9a7f071caaf.json"
+		"Map2-2f5c556d-f19b-4a5e-9f2d-f9a7f071caaf.json",
+		"Map3-d88ffee2-3ffe-4e31-84c7-75a14bdeb237.json",
+		"Map-bc03d36c-b225-4b51-8371-2577aa29e8c1.json"
 	],
 	"particleSystems": [],
 	"lights": [
@@ -142,7 +127,9 @@
 			"shadowGenerator": "sun-a76adafc-c695-43b9-bc2a-a5b1a01a6419.json"
 		}
 	],
-	"sounds": [],
+	"sounds": [
+		"Sounds!gunfire.mp3-6cd8e357-610e-48f1-8cb0-78fe9cbbfdb6.json"
+	],
 	"morphTargetManagers": [],
 	"reflectionProbes": [],
 	"scene": {
@@ -420,7 +407,26 @@
 				"maxDistance": 1
 			}
 		],
-		"sounds": []
+		"sounds": [
+			{
+				"name": "Sounds/gunfire.mp3",
+				"url": "Sounds/gunfire.mp3",
+				"autoplay": false,
+				"loop": false,
+				"volume": 1,
+				"spatialSound": false,
+				"maxDistance": 100,
+				"rolloffFactor": 1,
+				"refDistance": 1,
+				"distanceModel": "linear",
+				"playbackRate": 1,
+				"panningModel": "equalpower",
+				"soundTrackId": -1,
+				"metadata": {
+					"id": "6cd8e357-610e-48f1-8cb0-78fe9cbbfdb6"
+				}
+			}
+		]
 	},
 	"assets": {
 		"meshes": [],
@@ -444,15 +450,15 @@
 			"checkCollisions": false,
 			"applyGravity": false,
 			"rotation": [
-				0.5007515858365217,
-				-9.697281166926528,
+				0.30636171941734897,
+				-2.708425957652605,
 				0
 			],
 			"speed": 2,
 			"position": [
-				-5.014695498934731,
-				23.67493691426153,
-				28.71857105510111
+				59.21976130305668,
+				36.34006270154936,
+				-227.65212615115925
 			],
 			"upVector": [
 				0,

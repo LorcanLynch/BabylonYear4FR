@@ -7,9 +7,9 @@
 			"uniqueId": 3731,
 			"type": "Mesh",
 			"position": [
-				263.01611328125,
-				16.17433738708496,
-				-554.8333129882812
+				-42.97430419921875,
+				-30.31714630126953,
+				61.16872787475586
 			],
 			"rotationQuaternion": [
 				3.0908619072630584e-8,
@@ -88,15 +88,185 @@
 			"instances": [
 				{
 					"name": "Model::2story_long (Mesh Instance)",
-					"id": "4558ea68-33a6-495f-923f-4434f10c0025",
+					"id": "629d50c4-2242-44ac-8694-65c07c8ed6eb",
 					"isEnabled": true,
 					"isVisible": true,
 					"isPickable": true,
 					"checkCollisions": false,
 					"position": [
-						344.97857666015625,
-						16.17433738708496,
-						-554.8333129882812
+						-42.97430419921875,
+						-30.31714630126953,
+						-7.297130584716797
+					],
+					"scaling": [
+						0.6999999880790737,
+						0.6999999880790737,
+						0.699999988079071
+					],
+					"parentId": "2f5c556d-f19b-4a5e-9f2d-f9a7f071caaf",
+					"rotationQuaternion": [
+						3.0908619072630584e-8,
+						0.7071067811865468,
+						0.7071067811865469,
+						-3.0908619072630584e-8
+					],
+					"metadata": {
+						"isPickable": false,
+						"script": {
+							"name": "None"
+						},
+						"renderingGroupId": 0
+					},
+					"animations": [],
+					"ranges": []
+				},
+				{
+					"name": "Model::2story_long (Mesh Instance)",
+					"id": "26155d77-6958-4884-8c11-62e94052d7bb",
+					"isEnabled": true,
+					"isVisible": true,
+					"isPickable": true,
+					"checkCollisions": false,
+					"position": [
+						-42.97430419921875,
+						-30.31714630126953,
+						-68.44023132324219
+					],
+					"scaling": [
+						0.6999999880790737,
+						0.6999999880790737,
+						0.699999988079071
+					],
+					"parentId": "2f5c556d-f19b-4a5e-9f2d-f9a7f071caaf",
+					"rotationQuaternion": [
+						3.0908619072630584e-8,
+						0.7071067811865468,
+						0.7071067811865469,
+						-3.0908619072630584e-8
+					],
+					"metadata": {
+						"isPickable": false,
+						"script": {
+							"name": "None"
+						},
+						"renderingGroupId": 0
+					},
+					"animations": [],
+					"ranges": []
+				},
+				{
+					"name": "Model::2story_long (Mesh Instance)",
+					"id": "81cac20d-1b73-44c6-b185-508425b1774b",
+					"isEnabled": true,
+					"isVisible": true,
+					"isPickable": true,
+					"checkCollisions": false,
+					"position": [
+						-42.97430419921875,
+						-30.31714630126953,
+						-68.44023132324219
+					],
+					"scaling": [
+						0.6999999880790737,
+						0.6999999880790737,
+						0.699999988079071
+					],
+					"parentId": "2f5c556d-f19b-4a5e-9f2d-f9a7f071caaf",
+					"rotationQuaternion": [
+						3.0908619072630584e-8,
+						0.7071067811865468,
+						0.7071067811865469,
+						-3.0908619072630584e-8
+					],
+					"metadata": {
+						"isPickable": false,
+						"script": {
+							"name": "None"
+						},
+						"renderingGroupId": 0
+					},
+					"animations": [],
+					"ranges": []
+				},
+				{
+					"name": "Model::2story_long (Mesh Instance)",
+					"id": "ff8bd6fb-2cf9-420e-beca-a8dce1ac3819",
+					"isEnabled": true,
+					"isVisible": true,
+					"isPickable": true,
+					"checkCollisions": false,
+					"position": [
+						40.78516387939453,
+						-30.598310470581055,
+						61.16872787475586
+					],
+					"scaling": [
+						0.6999999880790737,
+						0.6999999880790737,
+						0.699999988079071
+					],
+					"parentId": "2f5c556d-f19b-4a5e-9f2d-f9a7f071caaf",
+					"rotationQuaternion": [
+						3.0908619072630584e-8,
+						0.7071067811865468,
+						0.7071067811865469,
+						-3.0908619072630584e-8
+					],
+					"metadata": {
+						"isPickable": false,
+						"script": {
+							"name": "None"
+						},
+						"renderingGroupId": 0
+					},
+					"animations": [],
+					"ranges": []
+				},
+				{
+					"name": "Model::2story_long (Mesh Instance)",
+					"id": "6e624d78-05f2-4930-a65e-f406d2d27549",
+					"isEnabled": true,
+					"isVisible": true,
+					"isPickable": true,
+					"checkCollisions": false,
+					"position": [
+						40.78516387939453,
+						-30.592559814453125,
+						-4.746240139007568
+					],
+					"scaling": [
+						0.6999999880790737,
+						0.6999999880790737,
+						0.699999988079071
+					],
+					"parentId": "2f5c556d-f19b-4a5e-9f2d-f9a7f071caaf",
+					"rotationQuaternion": [
+						3.0908619072630584e-8,
+						0.7071067811865468,
+						0.7071067811865469,
+						-3.0908619072630584e-8
+					],
+					"metadata": {
+						"isPickable": false,
+						"script": {
+							"name": "None"
+						},
+						"renderingGroupId": 0
+					},
+					"animations": [],
+					"ranges": []
+				},
+				{
+					"name": "Model::2story_long (Mesh Instance)",
+					"id": "76d64135-92c9-4c3a-b328-27c9f1a1083f",
+					"isEnabled": true,
+					"isVisible": true,
+					"isPickable": true,
+					"checkCollisions": false,
+					"position": [
+						40.78516387939453,
+						-30.61174774169922,
+						-71.25960540771484
 					],
 					"scaling": [
 						0.6999999880790737,

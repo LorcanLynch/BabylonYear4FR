@@ -1,4 +1,4 @@
-import { Mesh, KeyboardInfo } from "@babylonjs/core";
+import { Mesh, KeyboardInfo, TransformNode } from "@babylonjs/core";
 import { AdvancedDynamicTexture } from "@babylonjs/gui/2D/advancedDynamicTexture";
 import { Button, TextBlock } from "@babylonjs/gui";
 /**
@@ -28,6 +28,7 @@ export default class MyScript extends Mesh {
     private speed;
     advancedTexture: AdvancedDynamicTexture;
     button1: Button;
+    quitButton: Button;
     scoreText: TextBlock;
     score: number;
     private gravitys;
@@ -35,6 +36,11 @@ export default class MyScript extends Mesh {
     times: number;
     speedF: number;
     hazard: Mesh;
+    hazard2: Mesh;
+    hazard1: Mesh;
+    map: TransformNode;
+    hazardArray: Mesh[];
+    mapArray: Mesh[];
     canJump: boolean;
     health: number;
     protected _keyup(info: KeyboardInfo): void;
