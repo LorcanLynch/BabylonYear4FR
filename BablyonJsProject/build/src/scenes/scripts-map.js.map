@@ -1,1 +1,1 @@
-{"version":3,"file":"scripts-map.js","sourceRoot":"","sources":["../../../src/scenes/scripts-map.ts"],"names":[],"mappings":";;;AAUA;;GAEG;AACU,QAAA,UAAU,GAAoB;IAC1C,sBAAsB,EAAE,OAAO,CAAC,UAAU,CAAC;IAC3C,0BAA0B,EAAE,OAAO,CAAC,cAAc,CAAC;CACnD,CAAA"}
+{"version":3,"file":"scripts-map.js","sourceRoot":"","sources":["../../../src/scenes/scripts-map.ts"],"names":[],"mappings":";;;AAWA;;GAEG;AACU,QAAA,UAAU,GAAoB;IAC1C,mBAAmB,EAAE,OAAO,CAAC,OAAO,CAAC;IACrC,sBAAsB,EAAE,OAAO,CAAC,UAAU,CAAC;IAC3C,0BAA0B,EAAE,OAAO,CAAC,cAAc,CAAC;CACnD,CAAA"}

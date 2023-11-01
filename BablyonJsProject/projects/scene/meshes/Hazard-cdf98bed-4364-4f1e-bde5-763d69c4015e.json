@@ -1,0 +1,135 @@
+{
+	"materials": [],
+	"meshes": [
+		{
+			"name": "Hazard",
+			"id": "cdf98bed-4364-4f1e-bde5-763d69c4015e",
+			"uniqueId": 1393,
+			"type": "Mesh",
+			"position": [
+				3.532823545253957e-16,
+				-2.884769916534424,
+				-71.28753662109375
+			],
+			"rotationQuaternion": [
+				1,
+				6.123233932053594e-17,
+				6.123234262925839e-17,
+				3.749399939515246e-33
+			],
+			"scaling": [
+				1906.2130126953125,
+				-5.4399189949035645,
+				1.3371076583862305
+			],
+			"localMatrix": {
+				"0": 1,
+				"1": 0,
+				"2": 0,
+				"3": 0,
+				"4": 0,
+				"5": 1,
+				"6": 0,
+				"7": 0,
+				"8": 0,
+				"9": 0,
+				"10": 1,
+				"11": 0,
+				"12": 0,
+				"13": 0,
+				"14": 0,
+				"15": 1
+			},
+			"isEnabled": true,
+			"isVisible": true,
+			"infiniteDistance": false,
+			"pickable": true,
+			"receiveShadows": false,
+			"billboardMode": 0,
+			"visibility": 1,
+			"checkCollisions": true,
+			"isBlocker": false,
+			"overrideMaterialSideOrientation": null,
+			"isUnIndexed": false,
+			"geometryId": "a855786b-6a64-4f35-a2bd-2dfc0fd32d32",
+			"subMeshes": null,
+			"materialId": "default material",
+			"metadata": {
+				"editorGeometry": {
+					"type": "Cube",
+					"size": 1
+				},
+				"isPickable": false,
+				"script": {
+					"name": "src/scenes/Hazard.ts"
+				},
+				"renderingGroupId": 0,
+				"_waitingParentId": null
+			},
+			"instances": [],
+			"animations": [],
+			"ranges": [],
+			"layerMask": 268435455,
+			"alphaIndex": 1.7976931348623157e+308,
+			"hasVertexAlpha": false,
+			"overlayAlpha": 0.3,
+			"overlayColor": [
+				1,
+				0,
+				0
+			],
+			"applyFog": true,
+			"parentId": null,
+			"delayLoadingFile": "geometries/a855786b-6a64-4f35-a2bd-2dfc0fd32d32.babylonbinarymeshdata",
+			"boundingBoxMaximum": [
+				0.5,
+				0.5,
+				0.5
+			],
+			"boundingBoxMinimum": [
+				-0.5,
+				-0.5,
+				-0.5
+			],
+			"_binaryInfo": {
+				"positionsAttrDesc": {
+					"count": 72,
+					"stride": 3,
+					"offset": 0,
+					"dataType": 1
+				},
+				"normalsAttrDesc": {
+					"count": 72,
+					"stride": 3,
+					"offset": 288,
+					"dataType": 1
+				},
+				"uvsAttrDesc": {
+					"count": 48,
+					"stride": 2,
+					"offset": 576,
+					"dataType": 1
+				},
+				"indicesAttrDesc": {
+					"count": 36,
+					"stride": 1,
+					"offset": 768,
+					"dataType": 0
+				},
+				"subMeshesAttrDesc": {
+					"count": 1,
+					"stride": 5,
+					"offset": 912,
+					"dataType": 0
+				}
+			},
+			"positions": null,
+			"normals": null,
+			"uvs": null,
+			"hasUVs": true,
+			"indices": null
+		}
+	],
+	"multiMaterials": [],
+	"lods": []
+}

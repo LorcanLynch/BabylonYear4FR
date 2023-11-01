@@ -3,24 +3,23 @@
 	"meshes": [
 		{
 			"name": "New Cube",
-			"id": "cdf98bed-4364-4f1e-bde5-763d69c4015e",
-			"uniqueId": 1393,
+			"id": "b6ac0a91-7e25-42cd-b211-c48de0e7743f",
+			"uniqueId": 209,
 			"type": "Mesh",
 			"position": [
-				0,
-				0,
-				-71.28753662109375
+				3.0130534172058105,
+				2.436560914001307e-17,
+				0.10973294824361801
 			],
-			"rotationQuaternion": [
-				1,
-				6.123233995736766e-17,
-				6.123233995736766e-17,
-				3.749399456654644e-33
+			"rotation": [
+				1.5707963267948966,
+				0,
+				0
 			],
 			"scaling": [
-				1906.2130126953125,
-				-5.4399189949035645,
-				1.3371076583862305
+				2,
+				3.9971442222595215,
+				2
 			],
 			"localMatrix": {
 				"0": 1,
@@ -47,13 +46,13 @@
 			"receiveShadows": false,
 			"billboardMode": 0,
 			"visibility": 1,
-			"checkCollisions": true,
+			"checkCollisions": false,
 			"isBlocker": false,
 			"overrideMaterialSideOrientation": null,
 			"isUnIndexed": false,
-			"geometryId": "a855786b-6a64-4f35-a2bd-2dfc0fd32d32",
+			"geometryId": "67d84729-6eaa-43cd-983e-51309d0d061c",
 			"subMeshes": null,
-			"materialId": "default material",
+			"materialId": "501332a4-19a6-4d16-80c4-06ef6a15c186",
 			"metadata": {
 				"editorGeometry": {
 					"type": "Cube",
@@ -61,7 +60,7 @@
 				},
 				"isPickable": false,
 				"script": {
-					"name": "src/scenes/Hazard.ts"
+					"name": "None"
 				},
 				"renderingGroupId": 0,
 				"_waitingParentId": null
@@ -80,7 +79,7 @@
 			],
 			"applyFog": true,
 			"parentId": null,
-			"delayLoadingFile": "geometries/a855786b-6a64-4f35-a2bd-2dfc0fd32d32.babylonbinarymeshdata",
+			"delayLoadingFile": "geometries/67d84729-6eaa-43cd-983e-51309d0d061c.babylonbinarymeshdata",
 			"boundingBoxMaximum": [
 				0.5,
 				0.5,

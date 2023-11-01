@@ -46,33 +46,46 @@ var Game = /** @class */ (function () {
      * Constructor.
      */
     function Game() {
+        var _this = this;
+        /**
+         * Defines the scene used to store and draw elements in the canvas.
+         */
+        this.scene = null;
+        core_1.BabylonFileLoaderConfiguration.LoaderInjectedPhysicsEngine = CANNON;
         this.engine = new core_1.Engine(document.getElementById("renderCanvas"), true);
-        this.scene = new core_1.Scene(this.engine);
         this._bindEvents();
-        this._loadScene();
+        this.loadScene("UIScene/scene.babylon");
+        // Render.
+        this.engine.runRenderLoop(function () { var _a; return (_a = _this.scene) === null || _a === void 0 ? void 0 : _a.render(); });
     }
+    Game.prototype.disposeScene = function () {
+        if (this.scene == null) {
+            return;
+        }
+        this.scene.dispose();
+        this.scene = null;
+    };
     /**
-     * Loads the first scene.
+     * Loads a scene.
      */
-    Game.prototype._loadScene = function () {
+    Game.prototype.loadScene = function (sceneFileName) {
         return __awaiter(this, void 0, void 0, function () {
-            var rootUrl;
-            var _this = this;
+            var scene, rootUrl;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
+                        this.disposeScene();
+                        scene = new core_1.Scene(this.engine);
                         rootUrl = "./scenes/_assets/";
-                        core_1.BabylonFileLoaderConfiguration.LoaderInjectedPhysicsEngine = CANNON;
-                        return [4 /*yield*/, (0, tools_1.appendScene)(this.scene, rootUrl, "../scene/scene.babylon")];
+                        return [4 /*yield*/, (0, tools_1.appendScene)(scene, rootUrl, "../" + sceneFileName)];
                     case 1:
                         _a.sent();
                         // Attach camera.
-                        if (!this.scene.activeCamera) {
+                        if (!scene.activeCamera) {
                             throw new Error("No camera defined in the scene. Please add at least one camera in the project or create one yourself in the code.");
                         }
-                        this.scene.activeCamera.attachControl(this.engine.getRenderingCanvas(), false);
-                        // Render.
-                        this.engine.runRenderLoop(function () { return _this.scene.render(); });
+                        scene.activeCamera.attachControl(this.engine.getRenderingCanvas(), false);
+                        this.scene = scene;
                         return [2 /*return*/];
                 }
             });

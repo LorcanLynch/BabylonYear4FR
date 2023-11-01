@@ -1,10 +1,12 @@
-import { BabylonFileLoaderConfiguration, Engine, Scene } from "@babylonjs/core";
+import { BabylonFileLoaderConfiguration, Engine, Scene} from "@babylonjs/core";
 import "@babylonjs/materials";
 
 import * as CANNON from "cannon";
 
 import { appendScene } from "./scenes/tools";
-
+declare global {
+    var game: Game;
+}
 export class Game {
     /**
      * Defines the engine used to draw the game using Babylon.JS and WebGL.
@@ -13,38 +15,47 @@ export class Game {
     /**
      * Defines the scene used to store and draw elements in the canvas.
      */
-    public scene: Scene;
+    public scene: Scene | null = null;
 
     /**
      * Constructor.
      */
     public constructor() {
+        BabylonFileLoaderConfiguration.LoaderInjectedPhysicsEngine = CANNON;
         this.engine = new Engine(document.getElementById("renderCanvas") as HTMLCanvasElement, true);
-        this.scene = new Scene(this.engine);
 
         this._bindEvents();
-        this._loadScene();
+        this.loadScene("UIScene/scene.babylon");
+
+        // Render.
+        this.engine.runRenderLoop(() => this.scene?.render());
+    }
+
+    private disposeScene() {
+        if (this.scene == null) {
+            return;
+        }
+        this.scene.dispose();
+        this.scene = null;
     }
 
     /**
-     * Loads the first scene.
+     * Loads a scene.
      */
-    private async _loadScene(): Promise<void> {
+    async loadScene(sceneFileName: string): Promise<void> {
+        this.disposeScene();
+
+        const scene = new Scene(this.engine);
         const rootUrl = "./scenes/_assets/";
-
-        BabylonFileLoaderConfiguration.LoaderInjectedPhysicsEngine = CANNON;
-
-        await appendScene(this.scene, rootUrl, "../scene/scene.babylon");
+        await appendScene(scene, rootUrl, "../" + sceneFileName);
 
         // Attach camera.
-        if (!this.scene.activeCamera) {
+        if (!scene.activeCamera) {
             throw new Error("No camera defined in the scene. Please add at least one camera in the project or create one yourself in the code.");
         }
 
-        this.scene.activeCamera.attachControl(this.engine.getRenderingCanvas(), false);
-
-        // Render.
-        this.engine.runRenderLoop(() => this.scene.render());
+        scene.activeCamera.attachControl(this.engine.getRenderingCanvas(), false);
+        this.scene = scene;
     }
 
     /**

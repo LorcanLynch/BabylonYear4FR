@@ -1,8 +1,10 @@
 import {Scene,
     Mesh, AnimationRange, Animatable, ArcRotateCamera, Animation, Vector3,Ray,
-    Space, Bone, KeyboardInfo, KeyboardEventTypes, Epsilon, Quaternion, Scalar,
+    Space, Bone, KeyboardInfo, KeyboardEventTypes, Epsilon, Quaternion, Scalar,GetClass
 } from "@babylonjs/core";
 import { onKeyboardEvent, visibleInInspector ,fromScene} from "./decorators";
+import { send } from "process";
+
 
 
 /**
@@ -37,6 +39,7 @@ export default class MyScript extends Mesh {
      */
     public onInitialize(): void {
         // ...
+        
     }
 
     /**
@@ -44,6 +47,7 @@ export default class MyScript extends Mesh {
      */
     public onInitialized(): void {
         // ...
+        
     }
 
     /**

@@ -1,4 +1,6 @@
 import { Mesh, KeyboardInfo } from "@babylonjs/core";
+import { AdvancedDynamicTexture } from "@babylonjs/gui/2D/advancedDynamicTexture";
+import { Button, TextBlock } from "@babylonjs/gui";
 /**
  * This represents a script that is attached to a node in the editor.
  * Available nodes are:
@@ -24,10 +26,17 @@ export default class MyScript extends Mesh {
      */
     protected constructor();
     private speed;
+    advancedTexture: AdvancedDynamicTexture;
+    button1: Button;
+    scoreText: TextBlock;
+    score: number;
     private gravitys;
     time: number;
     times: number;
+    speedF: number;
+    hazard: Mesh;
     canJump: boolean;
+    health: number;
     protected _keyup(info: KeyboardInfo): void;
     protected _keydown(info: KeyboardInfo): void;
     protected _dkeyup(info: KeyboardInfo): void;
@@ -50,7 +59,9 @@ export default class MyScript extends Mesh {
     /**
      * Called each frame.
      */
+    updateOverlay(): void;
     onUpdate(): void;
+    Reset(): void;
     /**
      * Called on the object has been disposed.
      * Object can be disposed manually or when the editor stops running the scene.

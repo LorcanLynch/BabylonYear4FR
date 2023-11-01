@@ -1,27 +1,25 @@
 {
 	"animationGroups": [
-		"AnimStack!mixamo.com.json",
+		"jump.json",
+		"T-Pose.json",
 		"crouched.json",
 		"jump.json",
 		"T-Pose.json",
+		"crouched.json",
+		"T-Pose.json",
+		"jump.json",
 		"idle.json",
 		"crouched.json",
 		"jump.json",
-		"crouched.json",
-		"T-Pose.json",
-		"jump.json",
-		"crouched.json",
-		"Walk.json",
-		"Walk.json",
-		"jump.json",
-		"T-Pose.json",
-		"Walk.json",
-		"Walk.json",
-		"AnimStack!mixamo.com.json",
 		"idle.json",
-		"idle.json",
+		"Walk.json",
 		"T-Pose.json",
-		"idle.json"
+		"idle.json",
+		"Walk.json",
+		"crouched.json",
+		"Walk.json",
+		"idle.json",
+		"Walk.json"
 	],
 	"cameras": [
 		"New Target Camera-be2862cc-a372-4484-bd97-1beb9a972324.json"
@@ -129,7 +127,7 @@
 	"meshes": [
 		"ground-eee4645a-645f-4faf-b10b-868d396f01f0.json",
 		"sky-6a927ea7-51d9-4248-9b80-4d34b53b386e.json",
-		"New Cube-cdf98bed-4364-4f1e-bde5-763d69c4015e.json",
+		"Hazard-cdf98bed-4364-4f1e-bde5-763d69c4015e.json",
 		"Player-12fcc2b4-297c-4ea8-959b-69b17a6633b6.json",
 		"Model!2story_long-d61e71cc-3960-450c-b1ff-f52ffa3d028e.json",
 		"Model!roof-b03d7200-6719-41c2-9ed0-46a0739d5b27.json"
@@ -446,8 +444,8 @@
 			"checkCollisions": false,
 			"applyGravity": false,
 			"rotation": [
-				0.3757993004976458,
-				-9.735388268635184,
+				0.5007515858365217,
+				-9.697281166926528,
 				0
 			],
 			"speed": 2,

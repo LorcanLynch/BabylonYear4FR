@@ -1,0 +1,41 @@
+{
+	"tags": null,
+	"rotation": [
+		0,
+		-1.5571561918590506,
+		0
+	],
+	"speed": 2,
+	"position": [
+		5.3449225425720215,
+		0,
+		2.3104064439394278e-7
+	],
+	"upVector": [
+		0,
+		1,
+		0
+	],
+	"fov": 0.8,
+	"projectionPlaneTilt": 0,
+	"minZ": 1,
+	"maxZ": 10000,
+	"inertia": 0.9,
+	"mode": 0,
+	"layerMask": 268435455,
+	"fovMode": 0,
+	"cameraRigMode": 0,
+	"name": "New Target Camera",
+	"id": "38dc275d-30c7-4bd0-a8fa-2232a7d1d116",
+	"state": "",
+	"metadata": {
+		"script": {
+			"name": "src/scenes/GUI.ts"
+		}
+	},
+	"uniqueId": 828,
+	"type": "TargetCamera",
+	"animations": [],
+	"ranges": [],
+	"isEnabled": true
+}

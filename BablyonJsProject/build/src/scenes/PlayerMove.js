@@ -23,6 +23,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@babylonjs/core");
 var decorators_1 = require("./decorators");
+var advancedDynamicTexture_1 = require("@babylonjs/gui/2D/advancedDynamicTexture");
+var gui_1 = require("@babylonjs/gui");
 /**
  * This represents a script that is attached to a node in the editor.
  * Available nodes are:
@@ -50,8 +52,13 @@ var MyScript = /** @class */ (function (_super) {
     // @ts-ignore ignoring the super call as we don't want to re-init
     function MyScript() {
         var _this = this;
+        _this.advancedTexture = advancedDynamicTexture_1.AdvancedDynamicTexture.CreateFullscreenUI("myUI", true);
+        _this.button1 = gui_1.Button.CreateSimpleButton("but1", "click");
+        _this.scoreText = new gui_1.TextBlock();
+        _this.score = 0;
         _this.time = new Date().getTime();
         _this.times = new Date().getTime();
+        _this.speedF = 1;
         _this.canJump = true;
         return _this;
     }
@@ -97,18 +104,49 @@ var MyScript = /** @class */ (function (_super) {
      * Called on the scene starts.
      */
     MyScript.prototype.onStart = function () {
+        var _this = this;
         // ...
+        var canvas = document.getElementById("renderCanvas");
+        this.scoreText.text = "Score: 0";
+        this.scoreText.top = "0%";
+        this.scoreText.left = "45%";
+        this.scoreText.width = .2;
+        this.scoreText.height = 0.2;
+        this.scoreText.color = "white";
+        this.scoreText.fontSize = 20;
+        this.advancedTexture.addControl(this.scoreText);
+        this.button1.width = .2;
+        this.button1.height = 0.2;
+        this.button1.color = "white";
+        this.button1.fontSize = 20;
+        this.button1.background = "red";
+        this.button1.textBlock.text = "Game over, Restart?";
+        this.button1.onPointerUpObservable.add(function () { _this.Reset(); });
+        this.button1.isVisible = false;
+        this.advancedTexture.addControl(this.button1);
         this.skeleton.beginAnimation("Walk", true);
     };
     MyScript.prototype.anim = function () {
         // ...
-        this.skeleton.beginAnimation("Walk");
+        this.skeleton.beginAnimation("Walk", true);
     };
     /**
      * Called each frame.
      */
+    MyScript.prototype.updateOverlay = function () {
+        this.scoreText.text = "".concat("Score: " + this.score);
+    };
     MyScript.prototype.onUpdate = function () {
-        this.locallyTranslate(new core_1.Vector3(this.speed, this.gravitys, -1));
+        this.score++;
+        if (this.score % 10 == 0 && this.button1.isVisible == false) {
+            this.updateOverlay();
+        }
+        if (this.intersectsMesh(this.hazard, true, true)) {
+            this.hazard.setAbsolutePosition(new core_1.Vector3(this.hazard.getAbsolutePosition().x, this.hazard.getAbsolutePosition().y, this.hazard.getAbsolutePosition().z + 200));
+            this.button1.isVisible = true;
+            this.speedF = 0;
+        }
+        this.locallyTranslate(new core_1.Vector3(this.speed, this.gravitys, -this.speedF));
         if (this.times - this.time > 200) {
             this.gravitys = 0;
         }
@@ -123,6 +161,9 @@ var MyScript = /** @class */ (function (_super) {
         if (this.position.x < -13) {
             this.position.x = -13;
         }
+    };
+    MyScript.prototype.Reset = function () {
+        game.loadScene("scene/scene.babylon");
     };
     /**
      * Called on the object has been disposed.
@@ -144,6 +185,12 @@ var MyScript = /** @class */ (function (_super) {
                 break;
         }
     };
+    __decorate([
+        (0, decorators_1.fromScene)("Hazard")
+    ], MyScript.prototype, "hazard", void 0);
+    __decorate([
+        (0, decorators_1.visibleInInspector)("number", "health", 1)
+    ], MyScript.prototype, "health", void 0);
     __decorate([
         (0, decorators_1.onKeyboardEvent)("a", core_1.KeyboardEventTypes.KEYUP)
     ], MyScript.prototype, "_keyup", null);
