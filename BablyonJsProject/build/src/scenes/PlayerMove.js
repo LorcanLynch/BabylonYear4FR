@@ -56,12 +56,12 @@ var MyScript = /** @class */ (function (_super) {
         _this.button1 = gui_1.Button.CreateSimpleButton("but1", "click");
         _this.quitButton = gui_1.Button.CreateSimpleButton("but2", "Quit");
         _this.scoreText = new gui_1.TextBlock();
-        _this.score = 0;
+        _this.score = 1;
         _this.time = new Date().getTime();
         _this.times = new Date().getTime();
         _this.speedF = 1;
         _this.hazardArray = new Array(3);
-        _this.mapArray = new Array(3);
+        _this.mapArray = new Array(4);
         _this.canJump = true;
         return _this;
     }
@@ -87,6 +87,7 @@ var MyScript = /** @class */ (function (_super) {
             this.gravitys = 3;
             this.canJump = false;
             this.skeleton.beginAnimation("jump", false, 3, this.anim);
+            this._jump.play();
         }
     };
     ;
@@ -105,13 +106,19 @@ var MyScript = /** @class */ (function (_super) {
         this.hazardArray.push(this.hazard1);
         this.hazardArray.push(this.hazard2);
         this.hazardArray.push(this.hazard);
+        this.mapArray.push(this.map);
+        this.mapArray.push(this.map2);
+        this.mapArray.push(this.map3);
+        this.mapArray.push(this.map4);
     };
     /**
      * Called on the scene starts.
      */
     MyScript.prototype.onStart = function () {
-        // ...
         var _this = this;
+        // ...
+        this._song.loop = true;
+        this._song.play();
         this.scoreText.text = "Score: 0";
         this.scoreText.outlineWidth = 3;
         this.scoreText.outlineColor = "black";
@@ -170,13 +177,15 @@ var MyScript = /** @class */ (function (_super) {
             }
             else if (_this.position.z < element.position.z) {
                 element.setAbsolutePosition(new core_1.Vector3(Math.floor(Math.random() * (40 - 1) + 1), element.getAbsolutePosition().y, element.getAbsolutePosition().z - 150));
-                element.scaling.y = Math.floor(Math.random() * (20 + 6) + 6);
+                element.scaling.x = Math.floor(Math.random() * (15 + 5) + 5);
             }
         });
-        if (this.position.z < this.map.position.z - 150) {
-            this.map.position.z -= 400;
-        }
-        this.locallyTranslate(new core_1.Vector3(this.speed, this.gravitys, -this.speedF));
+        this.mapArray.forEach(function (element) {
+            if (_this.position.z < element.position.z - 150) {
+                element.position.z -= 900;
+            }
+        });
+        this.locallyTranslate(new core_1.Vector3(this.speed, this.gravitys, -this.speedF - ((this.score + 1) / 10000)));
         if (this.times - this.time > 200) {
             this.gravitys = 0;
         }
@@ -216,6 +225,12 @@ var MyScript = /** @class */ (function (_super) {
         }
     };
     __decorate([
+        (0, decorators_1.fromSounds)("Sounds/jump.wav", "global")
+    ], MyScript.prototype, "_jump", void 0);
+    __decorate([
+        (0, decorators_1.fromSounds)("Sounds/music.mp3", "global")
+    ], MyScript.prototype, "_song", void 0);
+    __decorate([
         (0, decorators_1.fromScene)("Hazard")
     ], MyScript.prototype, "hazard", void 0);
     __decorate([
@@ -225,8 +240,20 @@ var MyScript = /** @class */ (function (_super) {
         (0, decorators_1.fromScene)("Hazard1")
     ], MyScript.prototype, "hazard1", void 0);
     __decorate([
-        (0, decorators_1.fromScene)("Map2")
+        (0, decorators_1.fromScene)("Map")
     ], MyScript.prototype, "map", void 0);
+    __decorate([
+        (0, decorators_1.fromScene)("Map2")
+    ], MyScript.prototype, "map2", void 0);
+    __decorate([
+        (0, decorators_1.fromScene)("Map3")
+    ], MyScript.prototype, "map3", void 0);
+    __decorate([
+        (0, decorators_1.fromScene)("Map4")
+    ], MyScript.prototype, "map4", void 0);
+    __decorate([
+        (0, decorators_1.fromScene)("Sky")
+    ], MyScript.prototype, "sky", void 0);
     __decorate([
         (0, decorators_1.visibleInInspector)("number", "health", 1)
     ], MyScript.prototype, "health", void 0);

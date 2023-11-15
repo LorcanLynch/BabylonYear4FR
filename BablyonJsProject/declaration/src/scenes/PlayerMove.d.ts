@@ -25,6 +25,8 @@ export default class MyScript extends Mesh {
      * @warn do not fill.
      */
     protected constructor();
+    private _jump;
+    private _song;
     private speed;
     advancedTexture: AdvancedDynamicTexture;
     button1: Button;
@@ -39,8 +41,12 @@ export default class MyScript extends Mesh {
     hazard2: Mesh;
     hazard1: Mesh;
     map: TransformNode;
+    map2: TransformNode;
+    map3: TransformNode;
+    map4: TransformNode;
+    sky: Mesh;
     hazardArray: Mesh[];
-    mapArray: Mesh[];
+    mapArray: TransformNode[];
     canJump: boolean;
     health: number;
     protected _keyup(info: KeyboardInfo): void;

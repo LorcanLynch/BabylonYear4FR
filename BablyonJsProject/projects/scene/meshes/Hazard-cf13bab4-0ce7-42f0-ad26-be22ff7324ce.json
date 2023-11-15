@@ -1,0 +1,154 @@
+{
+	"materials": [],
+	"meshes": [
+		{
+			"name": "Hazard",
+			"id": "cf13bab4-0ce7-42f0-ad26-be22ff7324ce",
+			"uniqueId": 729,
+			"type": "Mesh",
+			"position": [
+				18.0322208404541,
+				-2.36563777923584,
+				-88.31381225585938
+			],
+			"rotationQuaternion": [
+				-0.5000000595989122,
+				-0.49999996225581983,
+				0.4999999404001247,
+				0.5000000377451331
+			],
+			"scaling": [
+				4.0000000000000755,
+				1.0000000000000009,
+				5.0000000000000995
+			],
+			"localMatrix": {
+				"0": 1,
+				"1": 0,
+				"2": 0,
+				"3": 0,
+				"4": 0,
+				"5": 1,
+				"6": 0,
+				"7": 0,
+				"8": 0,
+				"9": 0,
+				"10": 1,
+				"11": 0,
+				"12": 0,
+				"13": 0,
+				"14": 0,
+				"15": 1
+			},
+			"isEnabled": true,
+			"isVisible": true,
+			"infiniteDistance": false,
+			"pickable": true,
+			"receiveShadows": false,
+			"billboardMode": 0,
+			"visibility": 1,
+			"checkCollisions": false,
+			"isBlocker": false,
+			"overrideMaterialSideOrientation": null,
+			"isUnIndexed": false,
+			"geometryId": "bb136570-6819-48bd-9b7a-5a05eb1ab489",
+			"subMeshes": null,
+			"materialId": "05e379fd-596d-46df-b15a-f21634d65711",
+			"metadata": {
+				"basePoseMatrix": {
+					"0": 1,
+					"1": 0,
+					"2": 0,
+					"3": 0,
+					"4": 0,
+					"5": 1,
+					"6": 0,
+					"7": 0,
+					"8": 0,
+					"9": 0,
+					"10": 1,
+					"11": 0,
+					"12": 0,
+					"13": 0,
+					"14": 0,
+					"15": 1
+				},
+				"originalSourceFile": {
+					"id": "Model::Scifi Crate",
+					"name": "Model::Scifi Crate",
+					"sceneFileName": "CyberStuff/uploads_files_4349721_SCIFI+CRATE.fbx"
+				},
+				"isPickable": false,
+				"script": {
+					"name": "None"
+				},
+				"renderingGroupId": 0,
+				"_waitingParentId": null
+			},
+			"instances": [],
+			"animations": [],
+			"ranges": [],
+			"layerMask": 268435455,
+			"alphaIndex": 1.7976931348623157e+308,
+			"hasVertexAlpha": false,
+			"overlayAlpha": 0.3,
+			"overlayColor": [
+				1,
+				0,
+				0
+			],
+			"applyFog": true,
+			"parentId": null,
+			"delayLoadingFile": "geometries/bb136570-6819-48bd-9b7a-5a05eb1ab489.babylonbinarymeshdata",
+			"boundingBoxMaximum": [
+				0.8659620881080627,
+				1.2045396566390991,
+				1.769728183746338
+			],
+			"boundingBoxMinimum": [
+				-0.8659620881080627,
+				-1.2045396566390991,
+				-1.769728183746338
+			],
+			"_binaryInfo": {
+				"positionsAttrDesc": {
+					"count": 31914,
+					"stride": 3,
+					"offset": 0,
+					"dataType": 1
+				},
+				"normalsAttrDesc": {
+					"count": 31914,
+					"stride": 3,
+					"offset": 127656,
+					"dataType": 1
+				},
+				"uvsAttrDesc": {
+					"count": 21276,
+					"stride": 2,
+					"offset": 255312,
+					"dataType": 1
+				},
+				"indicesAttrDesc": {
+					"count": 10638,
+					"stride": 1,
+					"offset": 340416,
+					"dataType": 0
+				},
+				"subMeshesAttrDesc": {
+					"count": 1,
+					"stride": 5,
+					"offset": 382968,
+					"dataType": 0
+				}
+			},
+			"positions": null,
+			"normals": null,
+			"uvs": null,
+			"hasUVs": true,
+			"indices": null
+		}
+	],
+	"multiMaterials": [],
+	"lods": []
+}

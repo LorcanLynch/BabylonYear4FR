@@ -76,7 +76,8 @@
 					"name": "__root__",
 					"sceneFileName": "2story.glb"
 				},
-				"isPickable": false
+				"isPickable": false,
+				"_waitingParentId": null
 			},
 			"instances": [],
 			"animations": [],

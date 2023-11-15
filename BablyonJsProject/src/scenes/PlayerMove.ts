@@ -1,9 +1,9 @@
 import {Scene,
     Mesh, AnimationRange, Animatable, ArcRotateCamera, Animation, Vector3,Ray,
-    Space, Bone, KeyboardInfo, KeyboardEventTypes, Epsilon, Quaternion, Scalar,TransformNode
+    Space, Bone, KeyboardInfo, KeyboardEventTypes, Epsilon, Quaternion, Scalar,TransformNode,Sound
 } from "@babylonjs/core";
 import { ICanvasRenderingContext } from "@babylonjs/core/Engines/ICanvas";
-import { onKeyboardEvent, visibleInInspector ,fromScene} from "./decorators";
+import { onKeyboardEvent, visibleInInspector ,fromScene,fromSounds} from "./decorators";
 import { AdvancedDynamicTexture } from "@babylonjs/gui/2D/advancedDynamicTexture";
 import {Button, TextBlock } from "@babylonjs/gui";
 import { meshUVSpaceRendererPixelShader } from "@babylonjs/core/Shaders/meshUVSpaceRenderer.fragment";
@@ -39,12 +39,15 @@ export default class MyScript extends Mesh {
      */
     // @ts-ignore ignoring the super call as we don't want to re-init
     protected constructor() { }
+    @fromSounds("Sounds/jump.wav", "global") private _jump : Sound;
+    @fromSounds("Sounds/music.mp3", "global") private _song : Sound;
+    
     private speed : number;
     public advancedTexture = AdvancedDynamicTexture.CreateFullscreenUI("myUI", true)
     public button1=   Button.CreateSimpleButton("but1","click");
     public quitButton =  Button.CreateSimpleButton("but2","Quit");
     public scoreText = new TextBlock();
-    public score: number = 0;
+    public score: number = 1;
     private gravitys : number;
     public time : number = new Date().getTime();
     public times : number = new Date().getTime();
@@ -52,9 +55,13 @@ export default class MyScript extends Mesh {
     @fromScene("Hazard") public hazard : Mesh 
     @fromScene("Hazard2") public hazard2 : Mesh 
     @fromScene("Hazard1") public hazard1 : Mesh 
-    @fromScene("Map2") public map:TransformNode;
+    @fromScene("Map") public map:TransformNode;
+    @fromScene("Map2") public map2:TransformNode;
+    @fromScene("Map3") public map3:TransformNode;
+    @fromScene("Map4") public map4:TransformNode;
+    @fromScene("Sky") public sky:Mesh;
     public hazardArray : Mesh[] = new Array(3);
-    public mapArray : Mesh[] = new Array(3);
+    public mapArray : TransformNode[] = new Array(4);
     public canJump : boolean = true;
     @visibleInInspector("number","health",1)
     public health: number;
@@ -81,11 +88,12 @@ export default class MyScript extends Mesh {
         
         if(this.canJump)
         {
+            
         this.time = new Date().getTime();
         this.gravitys = 3
         this.canJump = false;
         this.skeleton.beginAnimation("jump",false,3,this.anim)
-       
+       this._jump.play();
         }
     };
 
@@ -107,12 +115,19 @@ export default class MyScript extends Mesh {
         this.hazardArray.push(this.hazard1)
         this.hazardArray.push(this.hazard2)
         this.hazardArray.push(this.hazard)
+        this.mapArray.push(this.map)
+        this.mapArray.push(this.map2)
+        this.mapArray.push(this.map3)
+        this.mapArray.push(this.map4)
     }
     /**
      * Called on the scene starts.
      */
     public onStart(): void {
         // ...
+        this._song.loop = true;
+        this._song.play();
+
        
        this.scoreText.text = "Score: 0"
        this.scoreText.outlineWidth = 3;
@@ -188,18 +203,21 @@ this.advancedTexture.addControl(this.quitButton);
             
             
                 element.setAbsolutePosition( new Vector3(Math.floor(Math.random() * (40-1) + 1),element.getAbsolutePosition().y,element.getAbsolutePosition().z-150))
-                element.scaling.y =Math.floor(Math.random() * (20+6) + 6);
+                element.scaling.x =Math.floor(Math.random() * (15+5) + 5);
             
         }
        });
-
-       if(this.position.z < this.map.position.z-150)
+       this.mapArray.forEach(element => {
+        if(this.position.z < element.position.z-150)
        {
-        this.map.position.z -=400
+        element.position.z -=900
        }
+       });
+       
         
         
-            this.locallyTranslate(new Vector3(this.speed,this.gravitys,-this.speedF))
+            this.locallyTranslate(new Vector3(this.speed ,this.gravitys,-this.speedF - ((this.score+1) /10000)))
+            
             if(this.times - this.time > 200)
             {
             this.gravitys = 0;

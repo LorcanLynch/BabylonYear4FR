@@ -36,7 +36,7 @@
 	"alpha": 1,
 	"backFaceCulling": true,
 	"cullBackFaces": true,
-	"sideOrientation": 1,
+	"sideOrientation": 0,
 	"alphaMode": 2,
 	"_needDepthPrePass": false,
 	"disableDepthWrite": false,
