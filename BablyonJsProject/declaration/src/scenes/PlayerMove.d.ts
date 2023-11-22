@@ -27,19 +27,31 @@ export default class MyScript extends Mesh {
     protected constructor();
     private _jump;
     private _song;
-    private speed;
+    private horizontalSpeed;
     advancedTexture: AdvancedDynamicTexture;
-    button1: Button;
+    resetButton: Button;
     quitButton: Button;
+    resumeButton: Button;
     scoreText: TextBlock;
     score: number;
-    private gravitys;
-    time: number;
-    times: number;
+    private verticalSpeed;
+    timeOfJump: number;
+    currentTime: number;
     speedF: number;
-    hazard: Mesh;
-    hazard2: Mesh;
+    canMove: boolean;
+    paused: boolean;
     hazard1: Mesh;
+    hazard2: Mesh;
+    hazard3: Mesh;
+    hazard4: Mesh;
+    hazard5: Mesh;
+    hazard6: Mesh;
+    hazard7: Mesh;
+    hazard8: Mesh;
+    hazard9: Mesh;
+    hazard10: Mesh;
+    hazard11: Mesh;
+    hazard12: Mesh;
     map: TransformNode;
     map2: TransformNode;
     map3: TransformNode;
@@ -54,6 +66,7 @@ export default class MyScript extends Mesh {
     protected _dkeyup(info: KeyboardInfo): void;
     protected _dkeydown(info: KeyboardInfo): void;
     protected _spacekeydown(info: KeyboardInfo): void;
+    protected _pauseKey(info: KeyboardInfo): void;
     /**
      * Called on the node is being initialized.
      * This function is called immediatly after the constructor has been called.
@@ -74,6 +87,7 @@ export default class MyScript extends Mesh {
     updateOverlay(): void;
     onUpdate(): void;
     Reset(): void;
+    Resume(): void;
     /**
      * Called on the object has been disposed.
      * Object can be disposed manually or when the editor stops running the scene.

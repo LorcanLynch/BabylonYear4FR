@@ -7,6 +7,7 @@ import { onKeyboardEvent, visibleInInspector ,fromScene,fromSounds} from "./deco
 import { AdvancedDynamicTexture } from "@babylonjs/gui/2D/advancedDynamicTexture";
 import {Button, TextBlock } from "@babylonjs/gui";
 import { meshUVSpaceRendererPixelShader } from "@babylonjs/core/Shaders/meshUVSpaceRenderer.fragment";
+import { fluentBackplatePixelShader } from "@babylonjs/gui/3D/materials/fluentBackplate/shaders/fluentBackplate.fragment";
 
 
 
@@ -42,19 +43,33 @@ export default class MyScript extends Mesh {
     @fromSounds("Sounds/jump.wav", "global") private _jump : Sound;
     @fromSounds("Sounds/music.mp3", "global") private _song : Sound;
     
-    private speed : number;
+    private horizontalSpeed : number;
     public advancedTexture = AdvancedDynamicTexture.CreateFullscreenUI("myUI", true)
-    public button1=   Button.CreateSimpleButton("but1","click");
+    public resetButton=   Button.CreateSimpleButton("but1","click");
     public quitButton =  Button.CreateSimpleButton("but2","Quit");
+    public resumeButton=   Button.CreateSimpleButton("but3","click");
     public scoreText = new TextBlock();
     public score: number = 1;
-    private gravitys : number;
-    public time : number = new Date().getTime();
-    public times : number = new Date().getTime();
+    private verticalSpeed : number;
+    public timeOfJump : number = new Date().getTime();
+    public currentTime : number = new Date().getTime();
     public speedF: number =1;
-    @fromScene("Hazard") public hazard : Mesh 
-    @fromScene("Hazard2") public hazard2 : Mesh 
+    public canMove: boolean = true;
+    public paused:  boolean = false;
     @fromScene("Hazard1") public hazard1 : Mesh 
+    @fromScene("Hazard2") public hazard2 : Mesh 
+    @fromScene("Hazard3") public hazard3 : Mesh
+    @fromScene("Hazard4") public hazard4 : Mesh 
+    @fromScene("Hazard5") public hazard5 : Mesh 
+    @fromScene("Hazard6") public hazard6 : Mesh 
+    @fromScene("Hazard7") public hazard7 : Mesh 
+    @fromScene("Hazard8") public hazard8 : Mesh 
+    @fromScene("Hazard9") public hazard9: Mesh 
+    @fromScene("Hazard10") public hazard10 : Mesh 
+    @fromScene("Hazard11") public hazard11 : Mesh 
+    @fromScene("Hazard12") public hazard12: Mesh 
+    
+
     @fromScene("Map") public map:TransformNode;
     @fromScene("Map2") public map2:TransformNode;
     @fromScene("Map3") public map3:TransformNode;
@@ -67,19 +82,31 @@ export default class MyScript extends Mesh {
     public health: number;
     @onKeyboardEvent("a", KeyboardEventTypes.KEYUP)
     protected _keyup(info: KeyboardInfo): void {
-        this.speed = 0
+        if(this.canMove)
+        {
+        this.horizontalSpeed = 0
+        }
     };
     @onKeyboardEvent("a", KeyboardEventTypes.KEYDOWN)
     protected _keydown(info: KeyboardInfo): void {
-        this.speed = 1
+        if(this.canMove)
+        {
+        this.horizontalSpeed = 1
+        }
     };
     @onKeyboardEvent("d", KeyboardEventTypes.KEYUP)
     protected _dkeyup(info: KeyboardInfo): void {
-        this.speed = 0
+        if(this.canMove)
+        {
+        this.horizontalSpeed = 0
+        }
     };
     @onKeyboardEvent("d", KeyboardEventTypes.KEYDOWN)
     protected _dkeydown(info: KeyboardInfo): void {
-        this.speed = -1
+        if(this.canMove)
+        {
+        this.horizontalSpeed = -1
+        }
     };
  
     
@@ -89,12 +116,38 @@ export default class MyScript extends Mesh {
         if(this.canJump)
         {
             
-        this.time = new Date().getTime();
-        this.gravitys = 3
+        this.timeOfJump = new Date().getTime();
+        this.verticalSpeed = 3
         this.canJump = false;
+        
         this.skeleton.beginAnimation("jump",false,3,this.anim)
        this._jump.play();
         }
+    };
+
+    @onKeyboardEvent("p", KeyboardEventTypes.KEYDOWN)
+    protected _pauseKey(info: KeyboardInfo): void {
+        
+        if(this.paused)
+        {
+            this.resumeButton.isVisible = false;
+
+            this.quitButton.isVisible = false;
+            this.canMove = true;
+            this.canJump = true;
+            this.paused = false
+        }
+        if(this.paused == false)
+        {
+            this.resumeButton.isVisible = true;
+
+            this.quitButton.isVisible = true;
+            this.canMove = false;
+            this.canJump = false;
+            this.paused = true;
+            
+        }
+            
     };
 
     
@@ -114,7 +167,16 @@ export default class MyScript extends Mesh {
         // ...
         this.hazardArray.push(this.hazard1)
         this.hazardArray.push(this.hazard2)
-        this.hazardArray.push(this.hazard)
+        this.hazardArray.push(this.hazard3)
+        this.hazardArray.push(this.hazard4)
+        this.hazardArray.push(this.hazard5)
+        this.hazardArray.push(this.hazard6)
+        this.hazardArray.push(this.hazard7)
+        this.hazardArray.push(this.hazard8)
+        this.hazardArray.push(this.hazard9)
+        this.hazardArray.push(this.hazard10)
+        this.hazardArray.push(this.hazard11)
+        this.hazardArray.push(this.hazard12)
         this.mapArray.push(this.map)
         this.mapArray.push(this.map2)
         this.mapArray.push(this.map3)
@@ -127,42 +189,55 @@ export default class MyScript extends Mesh {
         // ...
         this._song.loop = true;
         this._song.play();
-
+        this.hazardArray.forEach(element => {
+            element.scaling.y =Math.floor((Math.random() * (1+2)) + 1);
+            element.setAbsolutePosition( new Vector3(Math.floor(Math.random() * (40-1) + 1),element.getAbsolutePosition().y,element.getAbsolutePosition().z))
+        });
        
-       this.scoreText.text = "Score: 0"
-       this.scoreText.outlineWidth = 3;
-       this.scoreText.outlineColor= "black";
-       this.scoreText.fontFamily = "Verdana";
-       this.scoreText.fontStyle = "bold"    
-       this.scoreText.top = "-40%"
-       this.scoreText.left= "40%";
-       this.scoreText.width = .2
-       this.scoreText.height = 0.1;
-this.scoreText.color = "white";
-this.scoreText.fontSize = 20;
-this.advancedTexture.addControl(this.scoreText);
+    this.scoreText.text = "Score: 0"
+    this.scoreText.outlineWidth = 3;
+    this.scoreText.outlineColor= "black";
+    this.scoreText.fontFamily = "Verdana";
+    this.scoreText.fontStyle = "bold"    
+    this.scoreText.top = "-40%"
+    this.scoreText.left= "40%";
+    this.scoreText.width = .2
+    this.scoreText.height = 0.1;
+    this.scoreText.color = "white";
+    this.scoreText.fontSize = 20;
+    this.advancedTexture.addControl(this.scoreText);
 
 
-        this.button1.width = .2;
-this.button1.height = 0.1;
-this.button1.color = "white";
-this.button1.fontSize = 20;
-this.button1.background = "red";
-this.button1.textBlock.text = "Restart";
-this.button1.onPointerUpObservable.add( ()=>{this.Reset();} );
-this.button1.isVisible = false;
-this.advancedTexture.addControl(this.button1);
+        this.resetButton.width = .2;
+    this.resetButton.height = 0.1;
+    this.resetButton.color = "white";
+    this.resetButton.fontSize = 20;
+    this.resetButton.background = "red";
+    this.resetButton.textBlock.text = "Restart";
+    this.resetButton.onPointerUpObservable.add( ()=>{this.Reset();} );
+    this.resetButton.isVisible = false;
+    this.advancedTexture.addControl(this.resetButton);
 
-this.quitButton.width = .2;
-this.quitButton.height = 0.1;
-this.quitButton.color = "white";
-this.quitButton.fontSize = 20;
-this.quitButton.background = "red";
-this.quitButton.textBlock.text = "Quit.";
-this.quitButton.onPointerUpObservable.add( ()=>{game.loadScene("UIScene/scene.babylon");} );
-this.quitButton.isVisible = false;
-this.quitButton.top = "20%";
-this.advancedTexture.addControl(this.quitButton);
+    this.resumeButton.width = .2;
+    this.resumeButton.height = 0.1;
+    this.resumeButton.color = "white";
+    this.resumeButton.fontSize = 20;
+    this.resumeButton.background = "red";
+    this.resumeButton.textBlock.text = "Resume";
+    this.resumeButton.onPointerUpObservable.add( ()=>{this.Resume();} );
+    this.resumeButton.isVisible = false;
+    this.advancedTexture.addControl(this.resumeButton);
+
+    this.quitButton.width = .2;
+    this.quitButton.height = 0.1;
+    this.quitButton.color = "white";
+    this.quitButton.fontSize = 20;
+    this.quitButton.background = "red";
+    this.quitButton.textBlock.text = "Quit.";
+    this.quitButton.onPointerUpObservable.add( ()=>{game.loadScene("UIScene/scene.babylon");} );
+    this.quitButton.isVisible = false;
+    this.quitButton.top = "20%";
+    this.advancedTexture.addControl(this.quitButton);
               
         this.skeleton.beginAnimation("Walk",true)
 
@@ -187,23 +262,30 @@ this.advancedTexture.addControl(this.quitButton);
       }
     public onUpdate(): void {
         
+        if(!this.paused)
+        {
        this.score++;
-       if(this.score %10 == 0 && this.button1.isVisible == false)
+       if(this.score %10 == 0 && this.resetButton.isVisible == false)
        {this.updateOverlay();}
+        }
       this.hazardArray.forEach(element => {
         if(this.intersectsMesh(element,true,true))
         {
             element.setAbsolutePosition( new Vector3(element.getAbsolutePosition().x,element.getAbsolutePosition().y,element.getAbsolutePosition().z-200))
-            this.button1.isVisible = true;
+            this.resetButton.isVisible = true;
             this.quitButton.isVisible = true;
-            this.speedF = 0;
+            
+            this.horizontalSpeed = 0;
+            this.canMove = false;
+            this.canJump = false;
+            
         }
         else if(this.position.z < element.position.z)
         {
             
             
-                element.setAbsolutePosition( new Vector3(Math.floor(Math.random() * (40-1) + 1),element.getAbsolutePosition().y,element.getAbsolutePosition().z-150))
-                element.scaling.x =Math.floor(Math.random() * (15+5) + 5);
+                element.setAbsolutePosition( new Vector3(Math.floor(Math.random() * (40-1) + 1),element.getAbsolutePosition().y,element.getAbsolutePosition().z-650))
+                element.scaling.y =Math.floor((Math.random() * (1+2)) + 1);
             
         }
        });
@@ -215,21 +297,23 @@ this.advancedTexture.addControl(this.quitButton);
        });
        
         
-        
-            this.locallyTranslate(new Vector3(this.speed ,this.gravitys,-this.speedF - ((this.score+1) /10000)))
+        if(this.canMove)
+        {
+            this.locallyTranslate(new Vector3(this.horizontalSpeed ,this.verticalSpeed,-this.speedF - ((this.score+1) /10000)))
             
-            if(this.times - this.time > 200)
+            this.sky.locallyTranslate(new Vector3(0,0,-this.speedF - ((this.score+1) /10000)))
+            if(this.currentTime - this.timeOfJump > 200)
             {
-            this.gravitys = 0;
+            this.verticalSpeed = 0;
             
             }
-            if(this.times - this.time > 800)
+            if(this.currentTime - this.timeOfJump > 800)
             {
                 this.canJump = true;
                 
             }
             this.rotationQuaternion = Quaternion.Identity();
-           this.times = new Date().getTime();
+           this.currentTime = new Date().getTime();
            if(this.position.x >38)
            {
             this.position.x = 38;
@@ -238,11 +322,21 @@ this.advancedTexture.addControl(this.quitButton);
            {
             this.position.x = 0;
            }
+        }
           
     }
     public Reset(): void{
         
         game.loadScene("scene/scene.babylon");
+    }
+
+    public Resume(): void{
+        this.canJump = true;
+        this.canMove = true;    
+        this.resumeButton.isVisible = false;
+
+        this.quitButton.isVisible = false;
+        this.paused = false;
     }
     /**
      * Called on the object has been disposed.

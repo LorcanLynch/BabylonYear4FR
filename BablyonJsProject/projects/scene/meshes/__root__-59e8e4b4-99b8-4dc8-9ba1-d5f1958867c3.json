@@ -74,10 +74,14 @@
 				"originalSourceFile": {
 					"id": "__root__",
 					"name": "__root__",
-					"sceneFileName": "2story.glb"
+					"sceneFileName": "Cybercity/2story.glb"
 				},
 				"isPickable": false,
-				"_waitingParentId": null
+				"_waitingParentId": null,
+				"script": {
+					"name": "None"
+				},
+				"renderingGroupId": 0
 			},
 			"instances": [],
 			"animations": [],

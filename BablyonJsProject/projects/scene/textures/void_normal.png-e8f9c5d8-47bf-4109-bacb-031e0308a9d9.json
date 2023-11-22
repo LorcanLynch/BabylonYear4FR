@@ -1,6 +1,6 @@
 {
 	"tags": null,
-	"url": "void_normal.png",
+	"url": "Player/void_normal.png",
 	"uOffset": 0,
 	"vOffset": 0,
 	"uScale": 1,
@@ -13,7 +13,7 @@
 	"wRotationCenter": 0.5,
 	"homogeneousRotationInUVTransform": false,
 	"isBlocking": true,
-	"name": "void_normal.png",
+	"name": "Player/void_normal.png",
 	"metadata": {
 		"ktx2CompressedTextures": {
 			"isUsingCompressedTexture": false

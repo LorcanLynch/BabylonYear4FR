@@ -1,6 +1,6 @@
 {
 	"tags": null,
-	"url": "SpacePirate_specular.png",
+	"url": "Player/SpacePirate_specular.png",
 	"uOffset": 0,
 	"vOffset": 0,
 	"uScale": 1,
@@ -13,7 +13,7 @@
 	"wRotationCenter": 0.5,
 	"homogeneousRotationInUVTransform": false,
 	"isBlocking": true,
-	"name": "SpacePirate_specular.png",
+	"name": "Player/SpacePirate_specular.png",
 	"metadata": {
 		"ktx2CompressedTextures": {
 			"isUsingCompressedTexture": false

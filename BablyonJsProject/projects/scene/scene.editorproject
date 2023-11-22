@@ -1,26 +1,26 @@
 {
 	"animationGroups": [
 		"T-Pose.json",
-		"crouched.json",
-		"Walk.json",
-		"Walk.json",
-		"jump.json",
-		"T-Pose.json",
 		"jump.json",
 		"jump.json",
 		"T-Pose.json",
-		"T-Pose.json",
 		"crouched.json",
 		"Walk.json",
 		"jump.json",
 		"Walk.json",
-		"idle.json",
+		"crouched.json",
+		"T-Pose.json",
+		"T-Pose.json",
+		"Walk.json",
 		"crouched.json",
 		"idle.json",
+		"jump.json",
+		"idle.json",
+		"Walk.json",
+		"idle.json",
 		"crouched.json",
-		"idle.json",
-		"idle.json",
-		"SphereAction.json"
+		"SphereAction.json",
+		"idle.json"
 	],
 	"cameras": [
 		"New Target Camera-be2862cc-a372-4484-bd97-1beb9a972324.json"
@@ -33,26 +33,22 @@
 		},
 		{
 			"isMultiMaterial": false,
-			"bindedMeshes": [
-				"6a927ea7-51d9-4248-9b80-4d34b53b386e"
-			],
+			"bindedMeshes": [],
 			"json": "materials/sky.material"
 		},
 		{
 			"isMultiMaterial": false,
 			"bindedMeshes": [],
-			"json": "Alpha_Surface_MAT-4bf28582-de8b-4aff-868c-331dd309281f.material"
+			"json": "Player/Alpha_Surface_MAT-4bf28582-de8b-4aff-868c-331dd309281f.material"
 		},
 		{
 			"isMultiMaterial": false,
 			"bindedMeshes": [],
-			"json": "Alpha_Joints_MAT-048e4838-b60b-4fbb-8ba9-d1af56eda252.material"
+			"json": "Player/Alpha_Joints_MAT-048e4838-b60b-4fbb-8ba9-d1af56eda252.material"
 		},
 		{
 			"isMultiMaterial": false,
-			"bindedMeshes": [
-				"bc50f3da-4e33-4020-a516-07d530098b8c"
-			],
+			"bindedMeshes": [],
 			"json": "Cybercity/FBX/Material!roof_mat-905631552.material"
 		},
 		{
@@ -60,7 +56,7 @@
 			"bindedMeshes": [
 				"12fcc2b4-297c-4ea8-959b-69b17a6633b6"
 			],
-			"json": "Material!default1-71867808.material"
+			"json": "Player/Material!default1-71867808.material"
 		},
 		{
 			"isMultiMaterial": false,
@@ -73,6 +69,7 @@
 				"7ba2840d-70bd-4694-ab33-9a962efde124",
 				"c8b797ac-12f3-4e6a-9dab-153a88525c5d",
 				"37ed00f7-de80-42d0-b679-b17f861d2b70",
+				"9ecdac10-984d-45f9-9cd9-ea261b4480bd",
 				"0269bd0d-ff7e-423b-ba89-3c572fac1a14"
 			],
 			"json": "Cybercity/FBX/Material!2story_long_mat-905630592.material"
@@ -80,98 +77,43 @@
 		{
 			"isMultiMaterial": false,
 			"bindedMeshes": [],
-			"json": "roof2_mat-roof2_mat.material"
-		},
-		{
-			"isMultiMaterial": false,
-			"bindedMeshes": [],
-			"json": "4story_mat-4story_mat.material"
-		},
-		{
-			"isMultiMaterial": false,
-			"bindedMeshes": [],
-			"json": "CyberStuff/Material!M_Props_001-2168561425616.material"
-		},
-		{
-			"isMultiMaterial": false,
-			"bindedMeshes": [],
-			"json": "CyberStuff/Material.001-Material.001.material"
-		},
-		{
-			"isMultiMaterial": false,
-			"bindedMeshes": [],
-			"json": "CyberStuff/Material.003-Material.003.material"
-		},
-		{
-			"isMultiMaterial": false,
-			"bindedMeshes": [],
-			"json": "CyberStuff/light-light.material"
-		},
-		{
-			"isMultiMaterial": false,
-			"bindedMeshes": [],
-			"json": "CyberStuff/Material.017-Material.017.material"
-		},
-		{
-			"isMultiMaterial": false,
-			"bindedMeshes": [],
-			"json": "CyberStuff/Material.022-Material.022.material"
-		},
-		{
-			"isMultiMaterial": false,
-			"bindedMeshes": [],
-			"json": "CyberStuff/iron-iron.material"
-		},
-		{
-			"isMultiMaterial": false,
-			"bindedMeshes": [],
-			"json": "CyberStuff/metall-metall.material"
+			"json": "Cybercity/4story_mat-4story_mat.material"
 		},
 		{
 			"isMultiMaterial": false,
 			"bindedMeshes": [
-				"cf13bab4-0ce7-42f0-ad26-be22ff7324ce",
-				"11db0b20-85ff-406c-91cc-032702cf5ecf",
-				"b4c817ee-1196-4b76-98dd-f94feb246243"
-			],
-			"json": "CyberStuff/Material!Scifi Crate Material-596581524.material"
-		},
-		{
-			"isMultiMaterial": false,
-			"bindedMeshes": [
-				"eee4645a-645f-4faf-b10b-868d396f01f0"
-			],
-			"json": "CyberStuff/Mat/floor.material"
-		},
-		{
-			"isMultiMaterial": false,
-			"bindedMeshes": [],
-			"json": "wack.material"
-		},
-		{
-			"isMultiMaterial": false,
-			"bindedMeshes": [
-				"002b663a-8924-4450-b937-028ebcc7ff57",
 				"e792e27d-ccad-4c2e-b275-19b7aec9eff3",
 				"46529e26-c308-41f6-b9d0-468d323aebb3",
 				"753a6bd5-41b2-4aa9-af23-330b6243db5f",
 				"a8eda51d-3978-4571-a173-4e345d2e5de6"
 			],
-			"json": "Material!Materiais.001-962862469.material"
+			"json": "Road/Material!Materiais.001-962862469.material"
 		},
 		{
 			"isMultiMaterial": false,
 			"bindedMeshes": [
-				"34d130dc-afb7-4c0c-952f-3e78fcc71f15"
+				"f4f2d347-1018-48fd-9c19-60c4b76499e3",
+				"661e1e8c-a64b-4909-8599-044e4793d891",
+				"49022893-3c7e-4ff4-a364-f40d26791809",
+				"8e3015d7-cedb-452f-9d92-3164cf475bde",
+				"d405316e-6eb1-4577-8311-fa3adbcbd6e0",
+				"b91ec982-d5b2-41ad-9725-bb3cb05fa2c4",
+				"2b31d7c1-4d8b-4380-9d81-bea9f9042894",
+				"0a99f1e0-739e-483a-9f73-9f9657ddb65b",
+				"f28ce551-a3fe-478e-b6e2-bcc6c0884af4",
+				"05d3306b-60b9-4e3a-8097-54866169de69",
+				"4e2360a1-ded6-4df6-951a-f3b062a7ae72",
+				"805d50df-c2fe-4d5c-af93-db3f7542351c"
 			],
-			"json": "Materiais.001-Materiais.001.material"
+			"json": "!Wall/None-None.material"
 		},
 		{
 			"isMultiMaterial": false,
 			"bindedMeshes": [
-				"310670ac-5455-4b07-b4ef-559eb2b99f76"
+				"2c411ccf-a607-4654-957e-c23351aa7da5",
+				"7a57f82a-fe23-4130-ba58-fc8f9c031141"
 			],
-			"json": "Material!road-687116362.material"
+			"json": "materials/Material!road-687116362.material"
 		},
 		{
 			"isMultiMaterial": false,
@@ -203,45 +145,58 @@
 		"Target_Bake1_PBR StoA_Diffuse.png-bf512c1f-d048-4c6c-80ae-23879a243a7f.json",
 		"Target_Bake1_PBR StoA_Normal.png-b7809a80-37fe-4bb1-943c-4ce1141481e8.json",
 		"Untitled.jpg-c5e89630-4805-45f3-90c5-3e818338ef60.json",
+		"rua com faixada.jpg-f2ae47ee-69eb-44cb-91d5-b829ac0d1583.json",
+		"render3.jpg-a3a27246-3cfa-4eb4-b14f-d66b1d5bf96e.json",
+		"rze29aU.jpeg-81457778-8c05-4de5-9d6e-c217ac20e10c.json",
+		"Wall Panel 2_MatWallPanel2_BaseColor.png-576c24fe-3ab5-4923-96c2-cbe92117b1ad.json",
+		"Wall Panel 2_MatWallPanel2_Roughness.png-13b3b99f-2d3e-42fc-bb00-bda666fcee46.json",
+		"Wall Panel 2_MatWallPanel2_Emissive.png-f61ea9ae-7a42-4dfa-908a-86ec444f7b3c.json",
+		"Wall Panel 2_MatWallPanel2_Metallic.png-59f5a0e5-57ab-4344-b060-469a5a1a116b.json",
+		"Wall Panel 2_MatWallPanel2_Normal.png-14426ac8-aaec-495f-b73c-709cff006ec7.json",
 		"SpacePirate_diffuse.png-6f44d322-f77f-4f41-82a4-22c4132f6723.json",
 		"SpacePirate_specular.png-124a1aec-7b59-46ff-b6d0-642f83dd5536.json",
-		"SpacePirate_normal.png-52eb86c1-9bd8-4bc1-b1b9-987326ebdbc8.json",
-		"render3.jpg-a3a27246-3cfa-4eb4-b14f-d66b1d5bf96e.json",
-		"render3.jpg-f3108486-eeca-449d-b593-f27450b71f7b.json",
-		"rua com faixada.jpg-f2ae47ee-69eb-44cb-91d5-b829ac0d1583.json",
-		"rze29aU.jpeg-81457778-8c05-4de5-9d6e-c217ac20e10c.json"
+		"SpacePirate_normal.png-52eb86c1-9bd8-4bc1-b1b9-987326ebdbc8.json"
 	],
 	"meshes": [
 		"__root__-95208482-cba0-44f8-9fac-03d376706f23.json",
-		"Hazard-cf13bab4-0ce7-42f0-ad26-be22ff7324ce.json",
-		"Model!2story_long-181a6316-52f3-4615-9099-8303043d8adf.json",
-		"Model!roof-bc50f3da-4e33-4020-a516-07d530098b8c.json",
-		"Hazard1-11db0b20-85ff-406c-91cc-032702cf5ecf.json",
-		"Hazard2-b4c817ee-1196-4b76-98dd-f94feb246243.json",
-		"Player-12fcc2b4-297c-4ea8-959b-69b17a6633b6.json",
-		"Model!2story_long-d61e71cc-3960-450c-b1ff-f52ffa3d028e.json",
-		"__root__-0eb9c81d-e869-40b2-b393-113e6804bc21.json",
-		"__root__-59e8e4b4-99b8-4dc8-9ba1-d5f1958867c3.json",
-		"Model!2story_long-0269bd0d-ff7e-423b-ba89-3c572fac1a14.json",
 		"Model!rua-e792e27d-ccad-4c2e-b275-19b7aec9eff3.json",
 		"Model!rua-46529e26-c308-41f6-b9d0-468d323aebb3.json",
 		"Model!rua-753a6bd5-41b2-4aa9-af23-330b6243db5f.json",
+		"Model!2story_long-181a6316-52f3-4615-9099-8303043d8adf.json",
+		"Player-12fcc2b4-297c-4ea8-959b-69b17a6633b6.json",
 		"Model!2story_long-a64a2c3a-d3cf-4409-bceb-6027dd968adf.json",
 		"Model!rua-a8eda51d-3978-4571-a173-4e345d2e5de6.json",
+		"Model!2story_long-d61e71cc-3960-450c-b1ff-f52ffa3d028e.json",
 		"Model!2story_long-1d95c42e-496f-484f-a3fc-a72bcae67313.json",
 		"Model!2story_long-9c61dc83-f92e-4b5b-a12f-090d2b8def83.json",
 		"Model!2story_long-7ba2840d-70bd-4694-ab33-9a962efde124.json",
 		"Model!2story_long-c8b797ac-12f3-4e6a-9dab-153a88525c5d.json",
 		"Model!2story_long-37ed00f7-de80-42d0-b679-b17f861d2b70.json",
 		"Sky-b18a8513-8214-4100-a4f5-3b3c95206eaf.json",
-		"New Plane-8d0db0d0-bade-44ef-a47e-fd786cecbc0b.json"
+		"__root__-0eb9c81d-e869-40b2-b393-113e6804bc21.json",
+		"__root__-59e8e4b4-99b8-4dc8-9ba1-d5f1958867c3.json",
+		"Model!2story_long-0269bd0d-ff7e-423b-ba89-3c572fac1a14.json",
+		"gravplane-8d0db0d0-bade-44ef-a47e-fd786cecbc0b.json",
+		"Hazard1-f4f2d347-1018-48fd-9c19-60c4b76499e3.json",
+		"Hazard2-661e1e8c-a64b-4909-8599-044e4793d891.json",
+		"Hazard3-49022893-3c7e-4ff4-a364-f40d26791809.json",
+		"Hazard4-8e3015d7-cedb-452f-9d92-3164cf475bde.json",
+		"Hazard5-d405316e-6eb1-4577-8311-fa3adbcbd6e0.json",
+		"Hazard6-b91ec982-d5b2-41ad-9725-bb3cb05fa2c4.json",
+		"Hazard7-2b31d7c1-4d8b-4380-9d81-bea9f9042894.json",
+		"Hazard8-0a99f1e0-739e-483a-9f73-9f9657ddb65b.json",
+		"Hazard9-f28ce551-a3fe-478e-b6e2-bcc6c0884af4.json",
+		"Hazard10-05d3306b-60b9-4e3a-8097-54866169de69.json",
+		"Hazard11-4e2360a1-ded6-4df6-951a-f3b062a7ae72.json",
+		"Hazard12-805d50df-c2fe-4d5c-af93-db3f7542351c.json",
+		"grav2plane-dcca0447-a989-41c3-8cde-aa7416ba9705.json",
+		"Model!2story_long-9ecdac10-984d-45f9-9cd9-ea261b4480bd.json"
 	],
 	"transformNodes": [
-		"2story_long.FBX-1020c13c-4b6f-43f9-bd58-d8891a6104bc.json",
+		"Map4-f1e3acdf-c80a-4be0-a42d-ad21bcfd7871.json",
 		"Map2-2f5c556d-f19b-4a5e-9f2d-f9a7f071caaf.json",
 		"Map3-d88ffee2-3ffe-4e31-84c7-75a14bdeb237.json",
-		"Map-bc03d36c-b225-4b51-8371-2577aa29e8c1.json",
-		"Map4-f1e3acdf-c80a-4be0-a42d-ad21bcfd7871.json"
+		"Map-bc03d36c-b225-4b51-8371-2577aa29e8c1.json"
 	],
 	"particleSystems": [],
 	"lights": [
@@ -611,15 +566,15 @@
 			"checkCollisions": false,
 			"applyGravity": false,
 			"rotation": [
-				0.2403132697643855,
-				9.045211812696868,
+				0.12954360362651895,
+				-0.5847665599004036,
 				0
 			],
 			"speed": 2,
 			"position": [
-				-13.714687794937479,
-				109.02342354507358,
-				-202.5488298392084
+				38.438843385211754,
+				22.81211573590962,
+				-615.251315854481
 			],
 			"upVector": [
 				0,

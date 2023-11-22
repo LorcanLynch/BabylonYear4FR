@@ -53,41 +53,69 @@ var MyScript = /** @class */ (function (_super) {
     function MyScript() {
         var _this = this;
         _this.advancedTexture = advancedDynamicTexture_1.AdvancedDynamicTexture.CreateFullscreenUI("myUI", true);
-        _this.button1 = gui_1.Button.CreateSimpleButton("but1", "click");
+        _this.resetButton = gui_1.Button.CreateSimpleButton("but1", "click");
         _this.quitButton = gui_1.Button.CreateSimpleButton("but2", "Quit");
+        _this.resumeButton = gui_1.Button.CreateSimpleButton("but3", "click");
         _this.scoreText = new gui_1.TextBlock();
         _this.score = 1;
-        _this.time = new Date().getTime();
-        _this.times = new Date().getTime();
+        _this.timeOfJump = new Date().getTime();
+        _this.currentTime = new Date().getTime();
         _this.speedF = 1;
+        _this.canMove = true;
+        _this.paused = false;
         _this.hazardArray = new Array(3);
         _this.mapArray = new Array(4);
         _this.canJump = true;
         return _this;
     }
     MyScript.prototype._keyup = function (info) {
-        this.speed = 0;
+        if (this.canMove) {
+            this.horizontalSpeed = 0;
+        }
     };
     ;
     MyScript.prototype._keydown = function (info) {
-        this.speed = 1;
+        if (this.canMove) {
+            this.horizontalSpeed = 1;
+        }
     };
     ;
     MyScript.prototype._dkeyup = function (info) {
-        this.speed = 0;
+        if (this.canMove) {
+            this.horizontalSpeed = 0;
+        }
     };
     ;
     MyScript.prototype._dkeydown = function (info) {
-        this.speed = -1;
+        if (this.canMove) {
+            this.horizontalSpeed = -1;
+        }
     };
     ;
     MyScript.prototype._spacekeydown = function (info) {
         if (this.canJump) {
-            this.time = new Date().getTime();
-            this.gravitys = 3;
+            this.timeOfJump = new Date().getTime();
+            this.verticalSpeed = 3;
             this.canJump = false;
             this.skeleton.beginAnimation("jump", false, 3, this.anim);
             this._jump.play();
+        }
+    };
+    ;
+    MyScript.prototype._pauseKey = function (info) {
+        if (this.paused) {
+            this.resumeButton.isVisible = false;
+            this.quitButton.isVisible = false;
+            this.canMove = true;
+            this.canJump = true;
+            this.paused = false;
+        }
+        if (this.paused == false) {
+            this.resumeButton.isVisible = true;
+            this.quitButton.isVisible = true;
+            this.canMove = false;
+            this.canJump = false;
+            this.paused = true;
         }
     };
     ;
@@ -105,7 +133,16 @@ var MyScript = /** @class */ (function (_super) {
         // ...
         this.hazardArray.push(this.hazard1);
         this.hazardArray.push(this.hazard2);
-        this.hazardArray.push(this.hazard);
+        this.hazardArray.push(this.hazard3);
+        this.hazardArray.push(this.hazard4);
+        this.hazardArray.push(this.hazard5);
+        this.hazardArray.push(this.hazard6);
+        this.hazardArray.push(this.hazard7);
+        this.hazardArray.push(this.hazard8);
+        this.hazardArray.push(this.hazard9);
+        this.hazardArray.push(this.hazard10);
+        this.hazardArray.push(this.hazard11);
+        this.hazardArray.push(this.hazard12);
         this.mapArray.push(this.map);
         this.mapArray.push(this.map2);
         this.mapArray.push(this.map3);
@@ -119,6 +156,10 @@ var MyScript = /** @class */ (function (_super) {
         // ...
         this._song.loop = true;
         this._song.play();
+        this.hazardArray.forEach(function (element) {
+            element.scaling.y = Math.floor((Math.random() * (1 + 2)) + 1);
+            element.setAbsolutePosition(new core_1.Vector3(Math.floor(Math.random() * (40 - 1) + 1), element.getAbsolutePosition().y, element.getAbsolutePosition().z));
+        });
         this.scoreText.text = "Score: 0";
         this.scoreText.outlineWidth = 3;
         this.scoreText.outlineColor = "black";
@@ -131,15 +172,24 @@ var MyScript = /** @class */ (function (_super) {
         this.scoreText.color = "white";
         this.scoreText.fontSize = 20;
         this.advancedTexture.addControl(this.scoreText);
-        this.button1.width = .2;
-        this.button1.height = 0.1;
-        this.button1.color = "white";
-        this.button1.fontSize = 20;
-        this.button1.background = "red";
-        this.button1.textBlock.text = "Restart";
-        this.button1.onPointerUpObservable.add(function () { _this.Reset(); });
-        this.button1.isVisible = false;
-        this.advancedTexture.addControl(this.button1);
+        this.resetButton.width = .2;
+        this.resetButton.height = 0.1;
+        this.resetButton.color = "white";
+        this.resetButton.fontSize = 20;
+        this.resetButton.background = "red";
+        this.resetButton.textBlock.text = "Restart";
+        this.resetButton.onPointerUpObservable.add(function () { _this.Reset(); });
+        this.resetButton.isVisible = false;
+        this.advancedTexture.addControl(this.resetButton);
+        this.resumeButton.width = .2;
+        this.resumeButton.height = 0.1;
+        this.resumeButton.color = "white";
+        this.resumeButton.fontSize = 20;
+        this.resumeButton.background = "red";
+        this.resumeButton.textBlock.text = "Resume";
+        this.resumeButton.onPointerUpObservable.add(function () { _this.Resume(); });
+        this.resumeButton.isVisible = false;
+        this.advancedTexture.addControl(this.resumeButton);
         this.quitButton.width = .2;
         this.quitButton.height = 0.1;
         this.quitButton.color = "white";
@@ -164,20 +214,24 @@ var MyScript = /** @class */ (function (_super) {
     };
     MyScript.prototype.onUpdate = function () {
         var _this = this;
-        this.score++;
-        if (this.score % 10 == 0 && this.button1.isVisible == false) {
-            this.updateOverlay();
+        if (!this.paused) {
+            this.score++;
+            if (this.score % 10 == 0 && this.resetButton.isVisible == false) {
+                this.updateOverlay();
+            }
         }
         this.hazardArray.forEach(function (element) {
             if (_this.intersectsMesh(element, true, true)) {
                 element.setAbsolutePosition(new core_1.Vector3(element.getAbsolutePosition().x, element.getAbsolutePosition().y, element.getAbsolutePosition().z - 200));
-                _this.button1.isVisible = true;
+                _this.resetButton.isVisible = true;
                 _this.quitButton.isVisible = true;
-                _this.speedF = 0;
+                _this.horizontalSpeed = 0;
+                _this.canMove = false;
+                _this.canJump = false;
             }
             else if (_this.position.z < element.position.z) {
-                element.setAbsolutePosition(new core_1.Vector3(Math.floor(Math.random() * (40 - 1) + 1), element.getAbsolutePosition().y, element.getAbsolutePosition().z - 150));
-                element.scaling.x = Math.floor(Math.random() * (15 + 5) + 5);
+                element.setAbsolutePosition(new core_1.Vector3(Math.floor(Math.random() * (40 - 1) + 1), element.getAbsolutePosition().y, element.getAbsolutePosition().z - 650));
+                element.scaling.y = Math.floor((Math.random() * (1 + 2)) + 1);
             }
         });
         this.mapArray.forEach(function (element) {
@@ -185,24 +239,34 @@ var MyScript = /** @class */ (function (_super) {
                 element.position.z -= 900;
             }
         });
-        this.locallyTranslate(new core_1.Vector3(this.speed, this.gravitys, -this.speedF - ((this.score + 1) / 10000)));
-        if (this.times - this.time > 200) {
-            this.gravitys = 0;
-        }
-        if (this.times - this.time > 800) {
-            this.canJump = true;
-        }
-        this.rotationQuaternion = core_1.Quaternion.Identity();
-        this.times = new Date().getTime();
-        if (this.position.x > 38) {
-            this.position.x = 38;
-        }
-        if (this.position.x < 0) {
-            this.position.x = 0;
+        if (this.canMove) {
+            this.locallyTranslate(new core_1.Vector3(this.horizontalSpeed, this.verticalSpeed, -this.speedF - ((this.score + 1) / 10000)));
+            this.sky.locallyTranslate(new core_1.Vector3(0, 0, -this.speedF - ((this.score + 1) / 10000)));
+            if (this.currentTime - this.timeOfJump > 200) {
+                this.verticalSpeed = 0;
+            }
+            if (this.currentTime - this.timeOfJump > 800) {
+                this.canJump = true;
+            }
+            this.rotationQuaternion = core_1.Quaternion.Identity();
+            this.currentTime = new Date().getTime();
+            if (this.position.x > 38) {
+                this.position.x = 38;
+            }
+            if (this.position.x < 0) {
+                this.position.x = 0;
+            }
         }
     };
     MyScript.prototype.Reset = function () {
         game.loadScene("scene/scene.babylon");
+    };
+    MyScript.prototype.Resume = function () {
+        this.canJump = true;
+        this.canMove = true;
+        this.resumeButton.isVisible = false;
+        this.quitButton.isVisible = false;
+        this.paused = false;
     };
     /**
      * Called on the object has been disposed.
@@ -231,14 +295,41 @@ var MyScript = /** @class */ (function (_super) {
         (0, decorators_1.fromSounds)("Sounds/music.mp3", "global")
     ], MyScript.prototype, "_song", void 0);
     __decorate([
-        (0, decorators_1.fromScene)("Hazard")
-    ], MyScript.prototype, "hazard", void 0);
+        (0, decorators_1.fromScene)("Hazard1")
+    ], MyScript.prototype, "hazard1", void 0);
     __decorate([
         (0, decorators_1.fromScene)("Hazard2")
     ], MyScript.prototype, "hazard2", void 0);
     __decorate([
-        (0, decorators_1.fromScene)("Hazard1")
-    ], MyScript.prototype, "hazard1", void 0);
+        (0, decorators_1.fromScene)("Hazard3")
+    ], MyScript.prototype, "hazard3", void 0);
+    __decorate([
+        (0, decorators_1.fromScene)("Hazard4")
+    ], MyScript.prototype, "hazard4", void 0);
+    __decorate([
+        (0, decorators_1.fromScene)("Hazard5")
+    ], MyScript.prototype, "hazard5", void 0);
+    __decorate([
+        (0, decorators_1.fromScene)("Hazard6")
+    ], MyScript.prototype, "hazard6", void 0);
+    __decorate([
+        (0, decorators_1.fromScene)("Hazard7")
+    ], MyScript.prototype, "hazard7", void 0);
+    __decorate([
+        (0, decorators_1.fromScene)("Hazard8")
+    ], MyScript.prototype, "hazard8", void 0);
+    __decorate([
+        (0, decorators_1.fromScene)("Hazard9")
+    ], MyScript.prototype, "hazard9", void 0);
+    __decorate([
+        (0, decorators_1.fromScene)("Hazard10")
+    ], MyScript.prototype, "hazard10", void 0);
+    __decorate([
+        (0, decorators_1.fromScene)("Hazard11")
+    ], MyScript.prototype, "hazard11", void 0);
+    __decorate([
+        (0, decorators_1.fromScene)("Hazard12")
+    ], MyScript.prototype, "hazard12", void 0);
     __decorate([
         (0, decorators_1.fromScene)("Map")
     ], MyScript.prototype, "map", void 0);
@@ -272,6 +363,9 @@ var MyScript = /** @class */ (function (_super) {
     __decorate([
         (0, decorators_1.onKeyboardEvent)(" ", core_1.KeyboardEventTypes.KEYDOWN)
     ], MyScript.prototype, "_spacekeydown", null);
+    __decorate([
+        (0, decorators_1.onKeyboardEvent)("p", core_1.KeyboardEventTypes.KEYDOWN)
+    ], MyScript.prototype, "_pauseKey", null);
     return MyScript;
 }(core_1.Mesh));
 exports.default = MyScript;

@@ -1,6 +1,6 @@
 {
 	"tags": null,
-	"url": "SpacePirate_diffuse.png",
+	"url": "Player/SpacePirate_diffuse.png",
 	"uOffset": 0,
 	"vOffset": 0,
 	"uScale": 1,
@@ -13,7 +13,7 @@
 	"wRotationCenter": 0.5,
 	"homogeneousRotationInUVTransform": false,
 	"isBlocking": true,
-	"name": "SpacePirate_diffuse.png",
+	"name": "Player/SpacePirate_diffuse.png",
 	"metadata": {
 		"ktx2CompressedTextures": {
 			"isUsingCompressedTexture": false

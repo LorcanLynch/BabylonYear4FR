@@ -1,6 +1,6 @@
 {
 	"tags": null,
-	"url": "void_specular.png",
+	"url": "Player/void_specular.png",
 	"uOffset": 0,
 	"vOffset": 0,
 	"uScale": 1,
@@ -13,7 +13,7 @@
 	"wRotationCenter": 0.5,
 	"homogeneousRotationInUVTransform": false,
 	"isBlocking": true,
-	"name": "void_specular.png",
+	"name": "Player/void_specular.png",
 	"metadata": {
 		"ktx2CompressedTextures": {
 			"isUsingCompressedTexture": false

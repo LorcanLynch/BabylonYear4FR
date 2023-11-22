@@ -1,26 +1,4 @@
 {
-	"SpacePirate_specular.png": {
-		"autoLod": {
-			"disabled": false
-		},
-		"ktxCompression": {
-			"astc": {
-				"quality": "automatic"
-			},
-			"dxt": {
-				"type": "automatic"
-			},
-			"pvrtc": {
-				"quality": "automatic"
-			},
-			"etc1": {
-				"quality": "automatic"
-			},
-			"etc2": {
-				"quality": "automatic"
-			}
-		}
-	},
 	"CyberStuff/Untitled.jpg": {
 		"autoLod": {
 			"disabled": false
@@ -66,6 +44,138 @@
 		}
 	},
 	"CyberStuff/Mat/Untitled.jpg": {
+		"autoLod": {
+			"disabled": false
+		},
+		"ktxCompression": {
+			"astc": {
+				"quality": "automatic"
+			},
+			"dxt": {
+				"type": "automatic"
+			},
+			"pvrtc": {
+				"quality": "automatic"
+			},
+			"etc1": {
+				"quality": "automatic"
+			},
+			"etc2": {
+				"quality": "automatic"
+			}
+		}
+	},
+	"Player/SpacePirate_diffuse.png": {
+		"autoLod": {
+			"disabled": false
+		},
+		"ktxCompression": {
+			"astc": {
+				"quality": "automatic"
+			},
+			"dxt": {
+				"type": "automatic"
+			},
+			"pvrtc": {
+				"quality": "automatic"
+			},
+			"etc1": {
+				"quality": "automatic"
+			},
+			"etc2": {
+				"quality": "automatic"
+			}
+		}
+	},
+	"Player/SpacePirate_specular.png": {
+		"autoLod": {
+			"disabled": false
+		},
+		"ktxCompression": {
+			"astc": {
+				"quality": "automatic"
+			},
+			"dxt": {
+				"type": "automatic"
+			},
+			"pvrtc": {
+				"quality": "automatic"
+			},
+			"etc1": {
+				"quality": "automatic"
+			},
+			"etc2": {
+				"quality": "automatic"
+			}
+		}
+	},
+	"Player/void_diffuse.png": {
+		"autoLod": {
+			"disabled": false
+		},
+		"ktxCompression": {
+			"astc": {
+				"quality": "automatic"
+			},
+			"dxt": {
+				"type": "automatic"
+			},
+			"pvrtc": {
+				"quality": "automatic"
+			},
+			"etc1": {
+				"quality": "automatic"
+			},
+			"etc2": {
+				"quality": "automatic"
+			}
+		}
+	},
+	"Player/void_specular.png": {
+		"autoLod": {
+			"disabled": false
+		},
+		"ktxCompression": {
+			"astc": {
+				"quality": "automatic"
+			},
+			"dxt": {
+				"type": "automatic"
+			},
+			"pvrtc": {
+				"quality": "automatic"
+			},
+			"etc1": {
+				"quality": "automatic"
+			},
+			"etc2": {
+				"quality": "automatic"
+			}
+		}
+	},
+	"Cybercity/4story_mat (Emissive).png": {
+		"autoLod": {
+			"disabled": false
+		},
+		"ktxCompression": {
+			"astc": {
+				"quality": "automatic"
+			},
+			"dxt": {
+				"type": "automatic"
+			},
+			"pvrtc": {
+				"quality": "automatic"
+			},
+			"etc1": {
+				"quality": "automatic"
+			},
+			"etc2": {
+				"quality": "automatic"
+			}
+		}
+	},
+	"Cybercity/roof2_mat (Base Color).png": {
 		"autoLod": {
 			"disabled": false
 		},

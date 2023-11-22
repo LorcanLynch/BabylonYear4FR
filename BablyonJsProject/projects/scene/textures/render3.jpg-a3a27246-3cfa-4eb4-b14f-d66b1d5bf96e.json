@@ -16,7 +16,10 @@
 	"name": "render3.jpg",
 	"metadata": {
 		"editorName": "render3.jpg",
-		"editorId": "a3a27246-3cfa-4eb4-b14f-d66b1d5bf96e"
+		"editorId": "a3a27246-3cfa-4eb4-b14f-d66b1d5bf96e",
+		"ktx2CompressedTextures": {
+			"isUsingCompressedTexture": false
+		}
 	},
 	"hasAlpha": false,
 	"getAlphaFromRGB": false,

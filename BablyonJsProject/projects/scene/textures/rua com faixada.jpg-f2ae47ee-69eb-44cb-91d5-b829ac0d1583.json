@@ -1,6 +1,6 @@
 {
 	"tags": null,
-	"url": "rua com faixada.jpg",
+	"url": "Road/rua com faixada.jpg",
 	"uOffset": 0,
 	"vOffset": 0,
 	"uScale": 1,
@@ -13,7 +13,7 @@
 	"wRotationCenter": 0.5,
 	"homogeneousRotationInUVTransform": false,
 	"isBlocking": true,
-	"name": "rua com faixada.jpg",
+	"name": "Road/rua com faixada.jpg",
 	"metadata": {
 		"editorName": "rua com faixada.jpg",
 		"editorId": "f2ae47ee-69eb-44cb-91d5-b829ac0d1583",

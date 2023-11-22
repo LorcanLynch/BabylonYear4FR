@@ -55,10 +55,6 @@
 			"geometryId": "7f152a70-e918-41f7-9064-107aad1327ba",
 			"subMeshes": null,
 			"materialId": "92933498-25fe-4dac-a082-d112a8704027",
-			"physicsMass": 1,
-			"physicsFriction": 0.2,
-			"physicsRestitution": 0.2,
-			"physicsImpostor": 0,
 			"metadata": {
 				"basePoseMatrix": {
 					"0": 1,
@@ -81,7 +77,7 @@
 				"originalSourceFile": {
 					"id": "Model::rua",
 					"name": "Model::rua",
-					"sceneFileName": "untitled.fbx"
+					"sceneFileName": "Road/untitled.fbx"
 				},
 				"isPickable": false,
 				"script": {
