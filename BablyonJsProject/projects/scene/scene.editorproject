@@ -1,26 +1,26 @@
 {
 	"animationGroups": [
 		"T-Pose.json",
-		"jump.json",
+		"crouched.json",
 		"jump.json",
 		"T-Pose.json",
-		"crouched.json",
-		"Walk.json",
 		"jump.json",
-		"Walk.json",
-		"crouched.json",
 		"T-Pose.json",
+		"Walk.json",
 		"T-Pose.json",
 		"Walk.json",
 		"crouched.json",
-		"idle.json",
 		"jump.json",
+		"crouched.json",
+		"Walk.json",
+		"jump.json",
+		"crouched.json",
+		"idle.json",
 		"idle.json",
 		"Walk.json",
 		"idle.json",
-		"crouched.json",
-		"SphereAction.json",
-		"idle.json"
+		"idle.json",
+		"SphereAction.json"
 	],
 	"cameras": [
 		"New Target Camera-be2862cc-a372-4484-bd97-1beb9a972324.json"
@@ -92,9 +92,7 @@
 		{
 			"isMultiMaterial": false,
 			"bindedMeshes": [
-				"f4f2d347-1018-48fd-9c19-60c4b76499e3",
 				"661e1e8c-a64b-4909-8599-044e4793d891",
-				"49022893-3c7e-4ff4-a364-f40d26791809",
 				"8e3015d7-cedb-452f-9d92-3164cf475bde",
 				"d405316e-6eb1-4577-8311-fa3adbcbd6e0",
 				"b91ec982-d5b2-41ad-9725-bb3cb05fa2c4",
@@ -131,6 +129,20 @@
 				"b18a8513-8214-4100-a4f5-3b3c95206eaf"
 			],
 			"json": "materials/sskybox.material"
+		},
+		{
+			"isMultiMaterial": false,
+			"bindedMeshes": [
+				"f4f2d347-1018-48fd-9c19-60c4b76499e3"
+			],
+			"json": "!Wall/wallmat2.material"
+		},
+		{
+			"isMultiMaterial": false,
+			"bindedMeshes": [
+				"49022893-3c7e-4ff4-a364-f40d26791809"
+			],
+			"json": "!Wall/wallmat3.material"
 		}
 	],
 	"textures": [
@@ -566,15 +578,15 @@
 			"checkCollisions": false,
 			"applyGravity": false,
 			"rotation": [
-				0.12954360362651895,
-				-0.5847665599004036,
+				0.6572792223350973,
+				-2.6902719080529645,
 				0
 			],
 			"speed": 2,
 			"position": [
-				38.438843385211754,
-				22.81211573590962,
-				-615.251315854481
+				22.876958030265413,
+				59.68397320534192,
+				29.962831062748226
 			],
 			"upVector": [
 				0,

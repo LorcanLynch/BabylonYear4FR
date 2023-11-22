@@ -7,9 +7,9 @@
 			"uniqueId": 274,
 			"type": "Mesh",
 			"position": [
-				17.917091369628906,
+				17.727741241455078,
 				-1.540452241897583,
-				-87.06668853759766
+				-77.7755126953125
 			],
 			"rotation": [
 				0,
@@ -52,7 +52,7 @@
 			"isUnIndexed": false,
 			"geometryId": "7b8eb462-8ee1-4b93-8768-36186bd15795",
 			"subMeshes": null,
-			"materialId": "c64e6e59-76f0-4fee-aa3b-8b4ff0462c9c",
+			"materialId": "bda95281-b074-4772-9bb6-a7ab3e71d977",
 			"metadata": {
 				"basePoseMatrix": {
 					"0": 1,

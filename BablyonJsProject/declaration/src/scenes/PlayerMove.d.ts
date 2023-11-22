@@ -52,6 +52,9 @@ export default class MyScript extends Mesh {
     hazard10: Mesh;
     hazard11: Mesh;
     hazard12: Mesh;
+    private newMat;
+    private newMat2;
+    private newMat3;
     map: TransformNode;
     map2: TransformNode;
     map3: TransformNode;

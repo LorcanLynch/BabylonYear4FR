@@ -251,19 +251,19 @@
 		0.8
 	],
 	"specular": [
-		0.8,
-		0.8,
-		0.8
+		0.30028731247474405,
+		0.22348964253699904,
+		0.22348964253699904
 	],
 	"emissive": [
-		0,
-		0,
-		0
+		0.07375468242626669,
+		0.0751331085118083,
+		0.2212642801219019
 	],
 	"specularPower": 500,
 	"useAlphaFromDiffuseTexture": false,
 	"useEmissiveAsIllumination": false,
-	"linkEmissiveWithDiffuse": false,
+	"linkEmissiveWithDiffuse": true,
 	"useSpecularOverAlpha": false,
 	"useReflectionOverAlpha": false,
 	"disableLighting": false,
@@ -283,7 +283,7 @@
 	"invertNormalMapY": false,
 	"twoSidedLighting": false,
 	"id": "c64e6e59-76f0-4fee-aa3b-8b4ff0462c9c",
-	"name": "None",
+	"name": "wall",
 	"metadata": {
 		"editorPath": "!Wall/None-None.material",
 		"originalSourceFile": {

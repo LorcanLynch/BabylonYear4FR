@@ -1,15 +1,16 @@
 import {Scene,
     Mesh, AnimationRange, Animatable, ArcRotateCamera, Animation, Vector3,Ray,
-    Space, Bone, KeyboardInfo, KeyboardEventTypes, Epsilon, Quaternion, Scalar,TransformNode,Sound
+    Space, Bone, KeyboardInfo, KeyboardEventTypes, Epsilon, Quaternion, Scalar,TransformNode,Sound,Material
 } from "@babylonjs/core";
 import { ICanvasRenderingContext } from "@babylonjs/core/Engines/ICanvas";
-import { onKeyboardEvent, visibleInInspector ,fromScene,fromSounds} from "./decorators";
+import { onKeyboardEvent, visibleInInspector ,fromScene,fromSounds,fromMaterials} from "./decorators";
 import { AdvancedDynamicTexture } from "@babylonjs/gui/2D/advancedDynamicTexture";
 import {Button, TextBlock } from "@babylonjs/gui";
 import { meshUVSpaceRendererPixelShader } from "@babylonjs/core/Shaders/meshUVSpaceRenderer.fragment";
 import { fluentBackplatePixelShader } from "@babylonjs/gui/3D/materials/fluentBackplate/shaders/fluentBackplate.fragment";
+import { diffieHellman } from "crypto";
 
-
+import { LoadFile } from "@babylonjs/core/Misc/fileTools";
 
 
 
@@ -68,8 +69,10 @@ export default class MyScript extends Mesh {
     @fromScene("Hazard10") public hazard10 : Mesh 
     @fromScene("Hazard11") public hazard11 : Mesh 
     @fromScene("Hazard12") public hazard12: Mesh 
-    
-
+    //@fromMaterials("materials/wallmat2.material") private newMat : Material;
+    private newMat : Material = null;
+    private newMat2 : Material = null;
+    private newMat3 : Material = null;
     @fromScene("Map") public map:TransformNode;
     @fromScene("Map2") public map2:TransformNode;
     @fromScene("Map3") public map3:TransformNode;
@@ -181,6 +184,7 @@ export default class MyScript extends Mesh {
         this.mapArray.push(this.map2)
         this.mapArray.push(this.map3)
         this.mapArray.push(this.map4)
+        
     }
     /**
      * Called on the scene starts.
@@ -189,9 +193,25 @@ export default class MyScript extends Mesh {
         // ...
         this._song.loop = true;
         this._song.play();
+        this.newMat = this.hazard1.material;
+        this.newMat2 = this.hazard2.material;
+        
+        this.newMat3 = this.hazard3.material;
         this.hazardArray.forEach(element => {
             element.scaling.y =Math.floor((Math.random() * (1+2)) + 1);
             element.setAbsolutePosition( new Vector3(Math.floor(Math.random() * (40-1) + 1),element.getAbsolutePosition().y,element.getAbsolutePosition().z))
+            let random = Math.random();
+            if(random < .33)
+            {
+                element.material = this.newMat;
+            }
+            else if(random > .66){
+                element.material = this.newMat2;
+            }
+            else{
+                element.material = this.newMat3;
+            }
+            
         });
        
     this.scoreText.text = "Score: 0"
@@ -283,9 +303,16 @@ export default class MyScript extends Mesh {
         else if(this.position.z < element.position.z)
         {
             
-            
+            if(!this.canJump && (Vector3.Distance(new Vector3(element.getAbsolutePosition().x,0,0),new Vector3(this.getAbsolutePosition().x,0,0)) < 10))
+                {
+                    
+                    this.score += 200;
+                }
+                console.debug(Vector3.Distance(new Vector3(element.getAbsolutePosition().x,0,0),new Vector3(this.getAbsolutePosition().x,0,0)));
                 element.setAbsolutePosition( new Vector3(Math.floor(Math.random() * (40-1) + 1),element.getAbsolutePosition().y,element.getAbsolutePosition().z-650))
                 element.scaling.y =Math.floor((Math.random() * (1+2)) + 1);
+                
+                
             
         }
        });

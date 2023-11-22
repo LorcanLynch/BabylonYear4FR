@@ -63,6 +63,10 @@ var MyScript = /** @class */ (function (_super) {
         _this.speedF = 1;
         _this.canMove = true;
         _this.paused = false;
+        //@fromMaterials("materials/wallmat2.material") private newMat : Material;
+        _this.newMat = null;
+        _this.newMat2 = null;
+        _this.newMat3 = null;
         _this.hazardArray = new Array(3);
         _this.mapArray = new Array(4);
         _this.canJump = true;
@@ -156,9 +160,22 @@ var MyScript = /** @class */ (function (_super) {
         // ...
         this._song.loop = true;
         this._song.play();
+        this.newMat = this.hazard1.material;
+        this.newMat2 = this.hazard2.material;
+        this.newMat3 = this.hazard3.material;
         this.hazardArray.forEach(function (element) {
             element.scaling.y = Math.floor((Math.random() * (1 + 2)) + 1);
             element.setAbsolutePosition(new core_1.Vector3(Math.floor(Math.random() * (40 - 1) + 1), element.getAbsolutePosition().y, element.getAbsolutePosition().z));
+            var random = Math.random();
+            if (random < .33) {
+                element.material = _this.newMat;
+            }
+            else if (random > .66) {
+                element.material = _this.newMat2;
+            }
+            else {
+                element.material = _this.newMat3;
+            }
         });
         this.scoreText.text = "Score: 0";
         this.scoreText.outlineWidth = 3;
@@ -230,6 +247,10 @@ var MyScript = /** @class */ (function (_super) {
                 _this.canJump = false;
             }
             else if (_this.position.z < element.position.z) {
+                if (!_this.canJump && (core_1.Vector3.Distance(new core_1.Vector3(element.getAbsolutePosition().x, 0, 0), new core_1.Vector3(_this.getAbsolutePosition().x, 0, 0)) < 10)) {
+                    _this.score += 200;
+                }
+                console.debug(core_1.Vector3.Distance(new core_1.Vector3(element.getAbsolutePosition().x, 0, 0), new core_1.Vector3(_this.getAbsolutePosition().x, 0, 0)));
                 element.setAbsolutePosition(new core_1.Vector3(Math.floor(Math.random() * (40 - 1) + 1), element.getAbsolutePosition().y, element.getAbsolutePosition().z - 650));
                 element.scaling.y = Math.floor((Math.random() * (1 + 2)) + 1);
             }
