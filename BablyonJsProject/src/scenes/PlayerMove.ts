@@ -139,6 +139,7 @@ export default class MyScript extends Mesh {
             this.canMove = true;
             this.canJump = true;
             this.paused = false
+            this.skeleton.beginAnimation("Walk",true,1)
         }
         if(this.paused == false)
         {
@@ -148,6 +149,7 @@ export default class MyScript extends Mesh {
             this.canMove = false;
             this.canJump = false;
             this.paused = true;
+            this.skeleton.beginAnimation("Walk",true,0)
             
         }
             
@@ -212,7 +214,7 @@ export default class MyScript extends Mesh {
                 element.material = this.newMat3;
             }
             
-        });
+        }); 
        
     this.scoreText.text = "Score: 0"
     this.scoreText.outlineWidth = 3;
@@ -267,7 +269,7 @@ export default class MyScript extends Mesh {
     public anim(): void {
         // ...
         this.skeleton.beginAnimation("Walk",true)
-      
+        
     }
 
     
@@ -364,6 +366,7 @@ export default class MyScript extends Mesh {
 
         this.quitButton.isVisible = false;
         this.paused = false;
+        this.skeleton.beginAnimation("Walk",true,1)
     }
     /**
      * Called on the object has been disposed.

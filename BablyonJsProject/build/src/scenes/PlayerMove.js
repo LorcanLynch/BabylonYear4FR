@@ -113,6 +113,7 @@ var MyScript = /** @class */ (function (_super) {
             this.canMove = true;
             this.canJump = true;
             this.paused = false;
+            this.skeleton.beginAnimation("Walk", true, 1);
         }
         if (this.paused == false) {
             this.resumeButton.isVisible = true;
@@ -120,6 +121,7 @@ var MyScript = /** @class */ (function (_super) {
             this.canMove = false;
             this.canJump = false;
             this.paused = true;
+            this.skeleton.beginAnimation("Walk", true, 0);
         }
     };
     ;
@@ -288,6 +290,7 @@ var MyScript = /** @class */ (function (_super) {
         this.resumeButton.isVisible = false;
         this.quitButton.isVisible = false;
         this.paused = false;
+        this.skeleton.beginAnimation("Walk", true, 1);
     };
     /**
      * Called on the object has been disposed.

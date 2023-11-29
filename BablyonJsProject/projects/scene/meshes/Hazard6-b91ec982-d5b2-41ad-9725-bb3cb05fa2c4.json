@@ -81,7 +81,8 @@
 				"script": {
 					"name": "None"
 				},
-				"renderingGroupId": 0
+				"renderingGroupId": 0,
+				"_waitingParentId": null
 			},
 			"instances": [],
 			"animations": [],
@@ -99,14 +100,14 @@
 			"parentId": null,
 			"delayLoadingFile": "geometries/d1ecc36d-d092-4135-979c-68446a81b360.babylonbinarymeshdata",
 			"boundingBoxMaximum": [
-				2.935579,
-				6.193181,
-				0.01813
+				2.9355790615081787,
+				6.193181037902832,
+				0.018130000680685043
 			],
 			"boundingBoxMinimum": [
-				-2.935579,
-				0.052037,
-				-0.787366
+				-2.9355790615081787,
+				0.05203700065612793,
+				-0.7873659729957581
 			],
 			"_binaryInfo": {
 				"positionsAttrDesc": {
